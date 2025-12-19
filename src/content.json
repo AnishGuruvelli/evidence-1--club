@@ -1,0 +1,272 @@
+{
+  "siteTitle": "Leap Finance - Case Study",
+  "nav": {
+    "overview": "Overview",
+    "problem": "The Problem",
+    "solution": "Solution",
+    "prioritization": "Prioritization",
+    "roadmap": "Roadmap",
+    "successMetrics": "Success Metrics",
+    "nextSteps": "Next Steps",
+    "aboutMe": "About Me"
+  },
+  "hero": {
+    "headline": "Leap Finance – Beyond the Loan",
+    "subheadline": "From Transactional Loan Provider to Daily Financial Co-Pilot → Introducing 'Leap Orbit' to Solve Post-Arrival Financial Anxiety"
+  },
+  "pmSection": {
+    "title": "🎯 Leap Orbit: PM Product Improvement Case Study",
+    "body": "While Leap Finance dominates the pre-departure lending market, I identified a critical drop in engagement post-disbursal. Students land abroad with large sums of money but zero financial literacy in the new geography. As a Senior Product Manager, I conceptualized 'Leap Orbit'—a post-arrival financial wellness suite featuring Smart Pacing, Credit Score Gamification, and Squad Splitting to transform Leap from a one-time lender into a daily financial lifestyle app.",
+    "cta": "Explore the Strategy →"
+  },
+  "about": {
+    "sectionTitle": "1️⃣ Comprehend the Situation",
+    "title": "What is Leap Finance?",
+    "aboutTitle": "About Leap Finance",
+    "aboutBody": "Leap Finance is a leading fintech platform for Indian students pursuing international education. By underwriting loans based on future potential rather than parental assets, Leap democratizes access to global education. Their ecosystem currently includes education loans, international bank accounts, and credit cards.",
+    "goal": "The goal? Evolve Leap Finance from a 'Transactional Lender' (used once for a loan) into a 'Financial Operating System' that students use every single day while studying abroad.",
+    "industryTitle": "Industry Shift & Opportunity",
+    "industryBullets": [
+      "Students suffer from 'Wealth Shock'—managing $50k+ loans with no budgeting experience",
+      "Traditional banks (Chase, Wells Fargo) ignore immigrants with no credit history",
+      "Opportunity: Capture 'Share of Wallet' by solving the daily spending anxiety of students"
+    ],
+    "mission": "Mission: Empower global citizens not just to fund their dreams, but to master their financial reality in a new country."
+  },
+  "userSegments": [
+    "Pre-departure students (Anxious about forex rates and initial setup costs)",
+    "Fresh Arrivals (0-6 Months) struggling to budget their loan disbursement",
+    "Established Students (6-24 Months) focused on building credit scores for jobs/rentals",
+    "Working Alumni (Post-Grad) looking to refinance loans and invest"
+  ],
+  "userGoals": [
+    "Ensure their loan amount lasts the entire semester without running out",
+    "Build a 750+ US Credit Score quickly to rent apartments or buy cars",
+    "Split recurring bills (rent, wifi, groceries) with roommates easily",
+    "Avoid high forex markup fees on daily transactions",
+    "Understand 'Credit Utilization' and US financial terminology"
+  ],
+  "businessFocus": [
+    "Increase Daily Active Users (DAU) on the Leap App",
+    "Increase 'Share of Wallet' (Ensure the Leap Card is the primary spending card)",
+    "Reduce Loan Delinquency rates through better borrower budgeting",
+    "Cross-sell insurance and remittance products via increased engagement",
+    "Extend Customer Lifetime Value (LTV) beyond the university years"
+  ],
+  "clientPreferences": {
+    "labels": [
+      "Wants Financial Guidance",
+      "Just Wants the Money"
+    ],
+    "values": [
+      85,
+      15
+    ],
+    "colors": [
+      "#FF6B6B",
+      "#FFD93D"
+    ],
+    "description": "85% of students feel overwhelmed by managing foreign finances and actively seek guidance, not just capital."
+  },
+  "topPainPoints": [
+    {
+      "emoji": "💸",
+      "title": "The 'Wealth Shock' & Early Leakage",
+      "problem": "Students receive large loan disbursements (e.g., $15,000/semester) as a lump sum. Without budgeting experience, many overspend in the first month (buying iPhones, furniture) and run out of cash by month 4, leading to panic borrowing.",
+      "friction": "I have $15k in my account, so I feel rich. I bought a Macbook and ate out daily. Now it's November, and I can't pay rent.",
+      "color": "red"
+    },
+    {
+      "emoji": "👻",
+      "title": "Credit Invisible Paradox",
+      "problem": "In the US/UK, you are nobody without a credit score. Students can't get apartment leases or postpaid mobile plans because they have no history. They don't know which actions build credit and which hurt it.",
+      "friction": "I paid my rent on time in cash, but my credit score is still 0. I got rejected for a car lease even though I have a job offer. I don't know how the system works.",
+      "color": "gray"
+    },
+    {
+      "emoji": "🧮",
+      "title": "Forex Anxiety (The INR Hangover)",
+      "problem": "Students constantly mentally convert every coffee ($5) into INR (₹400) and feel guilty. Conversely, they lose money by timing their forex transfers from parents poorly.",
+      "friction": "I'm scared to buy a sandwich because it sounds expensive in Rupees. Also, my dad sent money when the dollar was at its peak, and we lost ₹10,000 on exchange rates.",
+      "color": "green"
+    },
+    {
+      "emoji": "🏠",
+      "title": "Roommate Expense Chaos",
+      "problem": "Most students live in shared housing. Splitting rent, utilities, and groceries is manual and messy. One person usually pays and chases others for Venmo/Zelle transfers, creating social friction.",
+      "friction": "I paid the $2,000 security deposit for the house. My roommates still haven't paid me back their share, and I'm awkward about asking them again.",
+      "color": "blue"
+    }
+  ],
+  "proposedSolutions": [
+    {
+      "emoji": "📉",
+      "title": "Smart Pacing – The 'Allowance' Mode",
+      "solution": "Lump Sum → Monthly Salary",
+      "whatItDoes": "Allows students to 'lock' their main loan balance and set up an auto-transfer 'Allowance' to their spending card every month. It calculates a 'Safe-to-Spend' daily limit based on their semester runway.",
+      "whyItHelps": "Prevents accidental bankruptcy. Mimics a salary structure, teaching financial discipline and ensuring rent money is always safe.",
+      "example": "Your semester balance is $10k. We've set your monthly spending limit to $1,800. You have $60 left for today.",
+      "color": "red"
+    },
+    {
+      "emoji": "🧗",
+      "title": "Credit Climber – Gamified Score Builder",
+      "solution": "Confusion → Clear Roadmap",
+      "whatItDoes": "A visual roadmap that turns credit building into a game. Users get points for keeping card utilization under 30%, paying full balances, and keeping accounts open. It simulates how specific actions will impact their future score.",
+      "whyItHelps": "Demystifies the FICO/Experian black box. Gives students immediate feedback on their financial behavior.",
+      "example": "Quest Complete: You kept utilization under 10% this month! +15 projected points. Next Goal: Pay your bill 3 days early.",
+      "color": "green"
+    },
+    {
+      "emoji": "🤝",
+      "title": "Squad Split – Integrated Bill Management",
+      "solution": "Awkward Texts → Auto-Settlement",
+      "whatItDoes": "Create a 'House Pod' within Leap. Scan grocery receipts or select rent payments, and the app instantly splits the cost. If all roommates use Leap, it auto-settles balances instantly without leaving the app.",
+      "whyItHelps": "Solving a high-frequency social pain point keeps the app sticky. Encourages viral loop—users force roommates to download Leap to make splitting easier.",
+      "example": "Rent ($2400) paid by Anish. Split 4 ways. $600 deducted from Rahul, Priya, and Sam's wallets instantly.",
+      "color": "blue"
+    },
+    {
+      "emoji": "🔔",
+      "title": "Forex Watch – Smart Rate Alerts",
+      "solution": "Guesswork → Data-Driven Transfers",
+      "whatItDoes": "Allows students (and parents) to set target exchange rates. The app notifies them when the INR-USD rate is favorable for tuition transfers or monthly maintenance.",
+      "whyItHelps": "Saves real money for families. Builds trust that Leap is on their side, not just trying to profit from spreads.",
+      "example": "Alert: The INR/USD rate just dropped to ₹82.50 (Low for the month). Good time to transfer tuition fees!",
+      "color": "yellow"
+    }
+  ],
+  "featurePrioritization": [
+    {
+      "title": "📉 Smart Pacing (Budgeting)",
+      "description": "High Urgency. Solves the immediate risk of students running out of money. High impact on loan repayment health."
+    },
+    {
+      "title": "🧗 Credit Climber (Gamification)",
+      "description": "High Strategic Value. Direct correlation to LTV. If they build credit with Leap, they take credit cards and mortgages from Leap later."
+    },
+    {
+      "title": "🤝 Squad Split (Social)",
+      "description": "Viral Growth Engine. Encourages students to onboard their roommates to the Leap ecosystem. Medium effort, high acquisition ROI."
+    },
+    {
+      "title": "🔔 Forex Watch",
+      "description": "Trust Builder. Low effort to build (API integration), but high value for the 'Parents' persona."
+    },
+    {
+      "title": "🛍️ Student Discounts Marketplace",
+      "description": "Low Priority. Nice to have, but highly competitive market (Unidays, StudentBeans exist). Can be added later."
+    }
+  ],
+  "successMetrics": [
+    {
+      "title": "📱 Engagement & Retention",
+      "metrics": [
+        "DAU/MAU Ratio (Target: Move from 10% to 35%)",
+        "Average Sessions Per Week (Target: 5+ sessions)",
+        "Feature Adoption Rate (% of borrowers using Smart Pacing)"
+      ]
+    },
+    {
+      "title": "💳 Monetization & Wallet Share",
+      "metrics": [
+        "Leap Card Utilization Rate (% of monthly spend on Leap Card)",
+        "Average Transaction Value (ATV)",
+        "Interchange Revenue per Active User"
+      ]
+    },
+    {
+      "title": "🛡️ Financial Health",
+      "metrics": [
+        "Average User Credit Score after 6 months",
+        "Loan Delinquency Rate (Control Group vs. Smart Pacing Users)",
+        "% of Roommates converted to new Leap Users (Viral Coefficient)"
+      ]
+    }
+  ],
+  "nextSteps": [
+    {
+      "icon": "🗣️",
+      "title": "User Discovery Interviews",
+      "description": "Interview 20 current students in US/UK to validate the 'Running out of money' anxiety and map their current bill-splitting hacks."
+    },
+    {
+      "icon": "🏗️",
+      "title": "MVP: Smart Pacing Toggle",
+      "description": "Build the backend logic to allow 'soft locking' of loan balances and auto-scheduled transfers to the spending card."
+    },
+    {
+      "icon": "🤝",
+      "title": "Credit Bureau API Partnerships",
+      "description": "Finalize agreements with Experian/TransUnion to fetch educational credit data for the 'Credit Climber' dashboard."
+    },
+    {
+      "icon": "🧪",
+      "title": "Beta Launch: Squad Split",
+      "description": "Roll out bill splitting to a small cohort of student housing clusters to test the viral onboarding flow."
+    }
+  ],
+  "aboutMeDescription": "I am a product strategist passionate about Fintech and the immigrant economy. This case study for Leap Finance showcases my ability to move beyond transactional products and build 'lifestyle ecosystems.' I thrive on solving complex user anxieties—like financial literacy in a new country—using data-driven features, gamification, and social loops.",
+  "keySkills": [
+    {
+      "title": "💡 Product Strategy",
+      "description": "Transitioning products from 'Utilities' to 'Daily Habits' using behavioral psychology."
+    },
+    {
+      "title": "🌍 Cross-Border Fintech",
+      "description": "Understanding of Forex, Neobanking regulations, and multi-currency wallets."
+    },
+    {
+      "title": "🎮 Gamification Design",
+      "description": "Driving financial literacy through progress bars, streaks, and reward loops."
+    },
+    {
+      "title": "📊 Growth & Virality",
+      "description": "Designing product-led growth features (like bill splitting) that drive organic acquisition."
+    },
+    {
+      "title": "🛠️ Execution & Roadmapping",
+      "description": "Experience leading engineering teams to ship high-quality mobile experiences."
+    }
+  ],
+  "linkedinUrl": "[Insert Your LinkedIn URL Here]",
+  "resumeUrl": "[Insert Your Resume URL Here]",
+  "finalRecommendation": {
+    "title": "7️⃣ Final Recommendation & Roadmap",
+    "subtitle": "Leap Orbit: The Path to Financial SuperApp",
+    "topBets": [
+      {
+        "icon": "📉",
+        "title": "Smart Pacing (The Anchor)",
+        "description": "The core utility that prevents financial disaster. It builds the trust required for all other features."
+      },
+      {
+        "icon": "🧗",
+        "title": "Credit Climber (The Hook)",
+        "description": "The gamified reason to open the app weekly. It aligns user incentives (high score) with business incentives (good repayment)."
+      },
+      {
+        "icon": "🤝",
+        "title": "Squad Split (The Viral Loop)",
+        "description": "The growth engine. Converts the user's social circle into Leap users organically."
+      },
+      {
+        "icon": "🤖",
+        "title": "Leap AI Advisor",
+        "description": "Future bet: A chatbot that answers questions like 'How do I file US taxes?' or 'What is an APR?'"
+      }
+    ],
+    "quickWins": [
+      "Launch 'Spending Insights' dashboard to show category breakdowns (Food vs Rent).",
+      "Enable 'Round-Ups' on the Leap Card to auto-save small amounts into a rainy day fund.",
+      "Send push notifications for Forex Rate lows to drive parent remittances.",
+      "Create a 'Credit Score Simulator' (If I spend $500, how much will my score drop?)."
+    ],
+    "longTermBets": [
+      "Launch 'Leap Invest' for working alumni to invest in US/Indian markets.",
+      "Partner with Universities to integrate tuition payments directly via the app.",
+      "Build a rental marketplace where landlords accept Leap Credit Scores instead of deposits.",
+      "Expand into 'Leap Tax' to automate tax filing for international students."
+    ]
+  }
+}
