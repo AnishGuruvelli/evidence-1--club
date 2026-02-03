@@ -451,7 +451,7 @@ const Index = () => {
             <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
               {content.pmSection.body}
             </p>
-            <a href="#problem" className="inline-block mt-2 px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300" onClick={handleNavClick}>{content.pmSection.cta}</a>
+            <a href="https://anishg-1-club.lovable.app" target="_blank" rel="noopener noreferrer" className="inline-block mt-2 px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300">{content.pmSection.cta}</a>
           </div>
         </section>
 
