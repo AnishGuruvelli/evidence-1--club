@@ -396,8 +396,9 @@ const Index = () => {
                 <a href="#solution" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Solution</a>
                 <a href="#prioritization" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Prioritization</a>
                 <a href="#roadmap" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Roadmap</a>
-                <a href="#success-metrics" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Success Metrics</a>
-                <a href="#next-steps" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Next Steps</a>
+                <a href="#success-metrics" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Metrics</a>
+                <a href="#next-steps" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Go-to-Market</a>
+                <a href="#evolution" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Evolution</a>
                 <a href="#about-me" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>About Me</a>
               </div>
             </div>
@@ -420,8 +421,9 @@ const Index = () => {
             <a href="#solution" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Solution</a>
             <a href="#prioritization" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Prioritization</a>
             <a href="#roadmap" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Roadmap</a>
-            <a href="#success-metrics" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Success Metrics</a>
-            <a href="#next-steps" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Next Steps</a>
+            <a href="#success-metrics" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Metrics</a>
+            <a href="#next-steps" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Go-to-Market</a>
+            <a href="#evolution" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Evolution</a>
             <a href="#about-me" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>About Me</a>
           </div>
         </div>
@@ -668,42 +670,150 @@ const Index = () => {
         <section id="success-metrics" ref={el => (routeRefs.current['success-metrics'] = el)} className="py-16 bg-slate-900/50 rounded-3xl shadow-xl glow-card border border-slate-800/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">8️⃣ SUCCESS METRICS</h2>
+              <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">3️⃣ METRICS & SUCCESS</h2>
               <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl">Measuring Our Success</p>
             </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              {content.successMetrics.map((metric, index) => (
-                <div key={index} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 glow-card">
-                  <h3 className="text-xl font-semibold text-cyan-300 mb-4">{metric.title}</h3>
-                  <ul className="text-slate-300 space-y-2 text-sm">
-                    {metric.metrics.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start">
-                        <span className="text-cyan-400 mr-2">•</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+            
+            {/* North Star Metric */}
+            <div className="mb-12 bg-gradient-to-br from-cyan-900/30 to-purple-900/30 p-8 rounded-2xl border border-cyan-500/30 glow-card">
+              <h3 className="text-2xl font-bold text-cyan-300 mb-4">{content.successMetrics.northStar.title}</h3>
+              <div className="text-3xl font-extrabold text-cyan-400 mb-4">{content.successMetrics.northStar.metric}</div>
+              <p className="text-slate-300 mb-4 leading-relaxed">{content.successMetrics.northStar.description}</p>
+              <p className="text-slate-200 font-medium">{content.successMetrics.northStar.whyItMatters}</p>
+            </div>
+
+            {/* Supporting Metrics */}
+            <div className="mb-12">
+              <h3 className="text-xl font-bold text-purple-300 mb-6 text-center">3 Supporting Metrics</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                {content.successMetrics.supportingMetrics.map((metric, index) => (
+                  <div key={index} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 glow-card">
+                    <h4 className="text-lg font-semibold text-cyan-300 mb-3">{metric.title}</h4>
+                    <p className="text-slate-300 text-sm mb-4">{metric.description}</p>
+                    <div className="border-t border-slate-700 pt-4 mt-4">
+                      <p className="text-xs text-slate-400 mb-2 font-semibold">Business Link:</p>
+                      <p className="text-slate-300 text-xs mb-3">{metric.businessLink}</p>
+                      <p className="text-xs text-slate-400 mb-2 font-semibold">User Link:</p>
+                      <p className="text-slate-300 text-xs">{metric.userLink}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Post-Launch Success Checks */}
+            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+              <h3 className="text-xl font-semibold text-amber-300 mb-4">{content.successMetrics.postLaunchSuccess.title}</h3>
+              <ul className="text-slate-300 space-y-2">
+                {content.successMetrics.postLaunchSuccess.checks.map((check, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-amber-400 mr-2">✓</span>
+                    <span>{check}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
 
-        {/* Next Steps */}
+        {/* Go-to-Market */}
         <section id="next-steps" ref={el => (routeRefs.current['next-steps'] = el)} className="py-16 scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">9️⃣ NEXT STEPS</h2>
-              <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl mb-10">If I Were the PM</p>
+              <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">4️⃣ GO-TO-MARKET</h2>
+              <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl mb-10">Reaching First 10,000 Users</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left w-full">
-              {content.nextSteps.map((step, index) => (
-                <div key={index} className="bg-slate-900/50 rounded-xl shadow-xl p-8 flex flex-col items-start border border-slate-700/50 glow-card hover:border-cyan-500/50 transition-all">
-                  <span className="text-4xl mb-4">{step.icon}</span>
-                  <h3 className="text-xl font-bold text-cyan-300 mb-3">{step.title}</h3>
-                  <p className="text-slate-300 text-base leading-relaxed">{step.description}</p>
-                </div>
-              ))}
+
+            {/* Launch Thesis */}
+            <div className="mb-12 bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-8 rounded-2xl border border-purple-500/30 glow-card">
+              <h3 className="text-2xl font-bold text-purple-300 mb-3">{content.goToMarket.launchThesis.title}</h3>
+              <p className="text-2xl font-extrabold text-purple-400 mb-4 italic">"{content.goToMarket.launchThesis.tagline}"</p>
+              <p className="text-slate-300 leading-relaxed">{content.goToMarket.launchThesis.description}</p>
+            </div>
+
+            {/* First 10K Users Channels */}
+            <div className="mb-12">
+              <h3 className="text-xl font-bold text-cyan-300 mb-6">{content.goToMarket.first10KUsers.title}</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {content.goToMarket.first10KUsers.channels.map((channel, index) => (
+                  <div key={index} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 glow-card">
+                    <div className="flex justify-between items-start mb-3">
+                      <h4 className="text-lg font-semibold text-cyan-300">{channel.channel}</h4>
+                      <span className="text-xs text-slate-400 bg-slate-700/50 px-2 py-1 rounded">{channel.timeline}</span>
+                    </div>
+                    <p className="text-slate-300 text-sm leading-relaxed">{channel.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Distribution Loops */}
+            <div>
+              <h3 className="text-xl font-bold text-purple-300 mb-6">{content.goToMarket.distributionLoops.title}</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {content.goToMarket.distributionLoops.loops.map((loop, index) => (
+                  <div key={index} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 glow-card">
+                    <h4 className="text-lg font-semibold text-purple-300 mb-3">{loop.name}</h4>
+                    <p className="text-slate-300 text-sm leading-relaxed">{loop.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Product Evolution & Monetization */}
+        <section id="evolution" ref={el => (routeRefs.current['evolution'] = el)} className="py-16 bg-slate-900/50 rounded-3xl shadow-xl glow-card border border-slate-800/50 scroll-mt-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">5️⃣ PRODUCT EVOLUTION & MONETIZATION</h2>
+              <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl">6–12 Month Roadmap</p>
+            </div>
+
+            {/* V2 Features */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-cyan-300 mb-6">{content.productEvolution.v2.title}</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {content.productEvolution.v2.features.map((feature, index) => (
+                  <div key={index} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 glow-card">
+                    <h4 className="text-lg font-semibold text-cyan-300 mb-3">{feature.feature}</h4>
+                    <p className="text-slate-300 text-sm leading-relaxed">{feature.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* V3 Features */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-purple-300 mb-6">{content.productEvolution.v3.title}</h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {content.productEvolution.v3.features.map((feature, index) => (
+                  <div key={index} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 glow-card">
+                    <h4 className="text-lg font-semibold text-purple-300 mb-3">{feature.feature}</h4>
+                    <p className="text-slate-300 text-sm leading-relaxed">{feature.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Monetization Pathway */}
+            <div className="bg-gradient-to-br from-emerald-900/30 to-cyan-900/30 p-8 rounded-2xl border border-emerald-500/30 glow-card">
+              <h3 className="text-2xl font-bold text-emerald-300 mb-3">{content.monetizationPathway.title}</h3>
+              <p className="text-xl font-semibold text-emerald-400 mb-6 italic">"{content.monetizationPathway.principle}"</p>
+              <div className="space-y-6 mb-6">
+                {content.monetizationPathway.strategies.map((strategy, index) => (
+                  <div key={index} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+                    <h4 className="text-lg font-semibold text-emerald-300 mb-2">{strategy.strategy}</h4>
+                    <p className="text-slate-300 text-sm mb-3 leading-relaxed">{strategy.description}</p>
+                    <p className="text-xs text-emerald-400 font-medium">UX Impact: {strategy.uxImpact}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="border-t border-slate-700 pt-6 mt-6">
+                <p className="text-slate-300 text-sm">
+                  <span className="font-semibold text-emerald-300">Revenue Projection:</span> {content.monetizationPathway.revenueProjection}
+                </p>
+              </div>
             </div>
           </div>
         </section>

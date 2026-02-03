@@ -170,55 +170,97 @@
       "description": "P0: Media Standard. Only videos, minimum 30 seconds. Ensures quality and visual proof-of-work."
     }
   ],
-  "successMetrics": [
-    {
+  "successMetrics": {
+    "northStar": {
       "title": "📈 North Star Metric",
-      "metrics": [
-        "Project Discussions per week (primary metric)",
-        "Projects uploaded per user",
-        "Acknowledgements per project",
-        "% discussions leading to repeat conversation"
-      ]
+      "metric": "Project Discussions per week",
+      "description": "This is the core loop metric. Every discussion represents: work discovered → context-rich conversation → potential opportunity. It measures the health of our work-first network.",
+      "whyItMatters": "More discussions = more opportunities = more value for builders. This directly links to business success (network effects, retention) and user success (getting discovered, hired, collaborated with)."
     },
-    {
-      "title": "⚡ Engagement Metrics",
-      "metrics": [
-        "Week 1: >50% users upload project",
-        "Week 3: Median project gets ≥1 acknowledgement",
-        "Week 6: Discussions growing WoW (week-over-week)"
-      ]
-    },
-    {
-      "title": "🌐 Discovery Metrics",
-      "metrics": [
-        "Projects discovered via Explore feed",
-        "Search queries by tag/category",
-        "Projects with \"Open to collaborate\" toggle enabled"
+    "supportingMetrics": [
+      {
+        "title": "📤 Projects Uploaded per User",
+        "description": "Measures engagement and platform value. More projects = better discovery surface = more opportunities.",
+        "businessLink": "Higher project density improves search/discovery quality, attracting more recruiters/founders.",
+        "userLink": "Builders with more projects get discovered more often and have higher discussion rates."
+      },
+      {
+        "title": "👏 Acknowledgements per Project",
+        "description": "Measures proof-of-work credibility. High acknowledgements = quality signal = better reputation.",
+        "businessLink": "Quality signals reduce noise, making the platform more valuable for talent discovery.",
+        "userLink": "Acknowledgements build reputation, leading to more discussions and opportunities."
+      },
+      {
+        "title": "🔄 % Discussions Leading to Repeat Conversation",
+        "description": "Measures conversation quality and relationship building. High repeat rate = strong network effects.",
+        "businessLink": "Repeat conversations indicate platform stickiness and long-term value creation.",
+        "userLink": "Repeat conversations mean builders are building real relationships, not just one-off DMs."
+      }
+    ],
+    "postLaunchSuccess": {
+      "title": "Post-Launch Success Measurement",
+      "checks": [
+        "Week 1: >50% of new users upload at least 1 project",
+        "Week 3: Median project receives ≥1 acknowledgement",
+        "Week 6: Project discussions growing week-over-week (WoW)",
+        "Month 3: 10% of discussions lead to repeat conversations",
+        "Month 6: 1,000+ active projects in Explore feed"
       ]
     }
-  ],
-  "nextSteps": [
-    {
-      "icon": "🚀",
-      "title": "Launch Thesis",
-      "description": "\"Stop writing resumes. Show what you built.\" Launch with hackathon partnerships, campus ambassadors, indie hacker communities, and founder/recruiter early access."
+  },
+  "goToMarket": {
+    "launchThesis": {
+      "title": "🚀 Launch Thesis",
+      "tagline": "\"Stop writing resumes. Show what you built.\"",
+      "description": "Evidence launches with a clear value proposition: work-first discovery beats pedigree-based networking. We're not another LinkedIn—we're the network where builders get discovered by what they build, not where they worked."
     },
-    {
-      "icon": "🔗",
-      "title": "Distribution Loops",
-      "description": "Shareable project links to LinkedIn/Twitter. Featured projects for early adopters. Themed build weeks (AI week, Design week)."
+    "first10KUsers": {
+      "title": "Reaching First 10,000 Users",
+      "channels": [
+        {
+          "channel": "Hackathon Partnerships",
+          "description": "Partner with 5-10 major hackathons (MLH, Devpost, local university hackathons). Offer: \"Submit your project on Evidence for a chance to be featured.\" Target: 2,000-3,000 builders from hackathons.",
+          "timeline": "Months 1-3"
+        },
+        {
+          "channel": "Campus Ambassadors",
+          "description": "Recruit 20-30 campus ambassadors at top CS/Design schools. Give them early access, featured profiles, and referral rewards. Target: 1,500-2,000 builders via campus network.",
+          "timeline": "Months 1-4"
+        },
+        {
+          "channel": "Indie Hacker Communities",
+          "description": "Engage with Indie Hackers, Product Hunt makers, Figma community, GitHub trending. Share case studies of builders who got opportunities via Evidence. Target: 2,000-3,000 builders.",
+          "timeline": "Months 1-6"
+        },
+        {
+          "channel": "Founder/Recruiter Early Access",
+          "description": "Invite 100-200 founders and startup recruiters to join first. They get early access to discover talent. This creates demand-side pull. Target: 1,500-2,000 builders (they invite builders they want to hire).",
+          "timeline": "Months 1-2"
+        }
+      ]
     },
-    {
-      "icon": "👥",
-      "title": "Community Channels",
-      "description": "Hackathon partnerships (submit projects on Evidence). Campus ambassadors program. Indie hacker / Figma / GitHub communities."
-    },
-    {
-      "icon": "📊",
-      "title": "Validation Plan",
-      "description": "25 user interviews: \"Last time you used work to get an opportunity—what was hard?\" Landing page test: \"Show what you built\" vs \"Build your CV\". Prototype test: Upload 20 projects → measure views → acknowledgements → discussions."
+    "distributionLoops": {
+      "title": "Early Distribution Loops",
+      "loops": [
+        {
+          "name": "Shareable Project Links",
+          "description": "Every project gets a shareable link (evidence.app/project/xyz). Builders share on LinkedIn/Twitter → drives traffic → new signups → more projects → more shares."
+        },
+        {
+          "name": "Featured Projects",
+          "description": "Weekly featured projects for early adopters. Featured builders share their feature → social proof → more signups."
+        },
+        {
+          "name": "Themed Build Weeks",
+          "description": "AI Week, Design Week, Fintech Week. Builders submit relevant projects → community engagement → viral loops within communities."
+        },
+        {
+          "name": "Acknowledgement Notifications",
+          "description": "When someone acknowledges your project, you get notified. You visit Evidence → see other projects → acknowledge → network effect."
+        }
+      ]
     }
-  ],
+  },
   "aboutMeDescription": "Product Manager building Evidence—a network where work is the primitive for identity, conversation, discovery, and opportunity. Focused on creating proof-of-work systems that help Gen Z builders get discovered, discussed, and hired because of what they built.",
   "keySkills": [
     {
@@ -287,33 +329,78 @@
       "No WIP timeline (V2 feature)"
     ]
   },
-  "roadmap": {
-    "title": "Roadmap (6–12 months)",
+  "productEvolution": {
+    "title": "Product Evolution (6–12 months)",
+    "description": "How Evidence evolves to maintain growth and value",
     "v2": {
-      "title": "V2 Features",
-      "items": [
-        "WIP timelines (show process, not just finished work)",
-        "Public project discussions (expand beyond private chats)",
-        "Builder reputation score (algorithmic credibility metric)"
+      "title": "V2: Enhanced Discovery & Engagement (Months 3-6)",
+      "features": [
+        {
+          "feature": "WIP Timelines",
+          "description": "Show process, not just finished work. Builders can share \"building in public\" updates. Increases engagement and authenticity."
+        },
+        {
+          "feature": "Public Project Discussions",
+          "description": "Expand beyond private chats. Allow public Q&A on projects. Builds community and helps others learn."
+        },
+        {
+          "feature": "Builder Reputation Score",
+          "description": "Algorithmic credibility metric based on acknowledgements, discussion quality, project views. Helps surface top builders."
+        },
+        {
+          "feature": "Project Collections",
+          "description": "Let builders curate their best work into themed collections (e.g., \"My Fintech Projects\", \"AI Experiments\")."
+        }
       ]
     },
     "v3": {
-      "title": "V3 Features",
-      "items": [
-        "Verified recruiter accounts",
-        "Advanced search (filters, sorting, saved searches)",
-        "Project collections (curate your best work)"
-      ]
-    },
-    "monetization": {
-      "title": "Monetization (No UX Harm)",
-      "description": "Builders never pay. Companies pay to discover.",
-      "items": [
-        "Recruiter/founder search subscription",
-        "Featured project placements (hackathons)",
-        "Optional verification badges"
+      "title": "V3: Scale & Network Effects (Months 6-12)",
+      "features": [
+        {
+          "feature": "Verified Recruiter Accounts",
+          "description": "Special accounts for recruiters/founders with verified badges. Builders can filter to see verified opportunities."
+        },
+        {
+          "feature": "Advanced Search & Filters",
+          "description": "Filters by tech stack, project type, location, availability. Saved searches for recruiters."
+        },
+        {
+          "feature": "Collaboration Tools",
+          "description": "Built-in tools for builders to find collaborators, start projects together, showcase team work."
+        },
+        {
+          "feature": "API & Integrations",
+          "description": "GitHub integration (auto-import repos), Figma plugin, Notion integration. Lower friction for project uploads."
+        }
       ]
     }
+  },
+  "monetizationPathway": {
+    "title": "Monetization Pathway (No UX Harm)",
+    "principle": "Builders never pay. Companies pay to discover.",
+    "strategies": [
+      {
+        "strategy": "Recruiter/Founder Search Subscription",
+        "description": "Free: Basic search (10 searches/month). Pro ($99/month): Unlimited searches, advanced filters, saved searches, priority support. Enterprise ($499/month): API access, bulk search, custom integrations.",
+        "uxImpact": "Zero impact on builders. Only affects recruiters/founders who want premium discovery tools."
+      },
+      {
+        "strategy": "Featured Project Placements",
+        "description": "Hackathons/events can sponsor featured project sections. Builders get featured for free (hackathons pay). Optional: Builders can pay $10/month for \"Featured\" badge on their profile (purely optional, no pressure).",
+        "uxImpact": "Minimal. Featured placements are clearly marked. Optional badges don't affect core functionality."
+      },
+      {
+        "strategy": "Verified Badges (Optional)",
+        "description": "Builders can optionally verify identity/credentials for $5/month. Purely optional—doesn't affect discovery or discussions.",
+        "uxImpact": "None. Completely optional, doesn't gate any features."
+      },
+      {
+        "strategy": "Enterprise Talent Pools",
+        "description": "Companies pay $2,000-5,000/month for private talent pools, custom search, bulk messaging (with builder consent), analytics.",
+        "uxImpact": "Positive. Builders get more opportunities. Companies get better discovery tools. Win-win."
+      }
+    ],
+    "revenueProjection": "Year 1: $50K-100K MRR (500-1,000 paying recruiters/founders). Year 2: $200K-500K MRR (network effects + enterprise)."
   },
   "validation": {
     "title": "How We Validate These Are Real Problems",
