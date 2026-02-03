@@ -118,10 +118,10 @@ const Index = () => {
     datasets: [{
       label: 'Client Preferences',
       data: clientPreferences.values,
-      backgroundColor: clientPreferences.colors,
-      borderColor: ['#FFFFFF'],
-      borderWidth: 2,
-      hoverOffset: 4
+      backgroundColor: ['#00D1FF', '#6366F1'],
+      borderColor: ['#0F172A'],
+      borderWidth: 3,
+      hoverOffset: 8
     }]
   };
   const demandChartOptions = {
@@ -136,13 +136,18 @@ const Index = () => {
       legend: {
         position: 'bottom' as const,
         labels: {
-          color: '#4B5563',
-          font: { size: 15 },
+          color: '#E2E8F0',
+          font: { size: 14 },
           usePointStyle: true,
-          padding: 24
+          padding: 20
         }
       },
       tooltip: {
+        backgroundColor: 'rgba(15, 23, 42, 0.95)',
+        titleColor: '#E2E8F0',
+        bodyColor: '#E2E8F0',
+        borderColor: '#6366F1',
+        borderWidth: 1,
         callbacks: {
           label: function(context: any) {
             const total = context.dataset.data.reduce((a: number, b: number) => a + b, 0);
@@ -154,7 +159,7 @@ const Index = () => {
       },
       datalabels: {
         display: true,
-        color: '#111827',
+        color: '#E2E8F0',
         font: { weight: 'bold', size: 18 },
         formatter: (value: number, ctx: any) => {
           const total = ctx.chart.data.datasets[0].data.reduce((a: number, b: number) => a + b, 0);
@@ -165,26 +170,27 @@ const Index = () => {
   };
 
   const riceChartData = {
-    labels: [
-      '⚖️ Fin-Fit Engine', 
-      '📦 GlassBox Tracker', 
-      '📊 Dollar-Dream Meter', 
-      '🤝 Future-Mate Pods', 
-      '🤖 AI SOP Evaluator'
-    ],
+    labels: content.featurePrioritization.slice(0, 5).map(f => f.title.split(' ').slice(1).join(' ')),
     datasets: [
       {
         label: 'RICE Score',
-        // Scores based on: Reach (all students) x Impact (high trust/conversion) x Confidence / Effort
-        data: [92, 88, 75, 65, 45], 
+        data: [92, 88, 85, 82, 75],
         backgroundColor: [
-          '#4C1D95', // Deep Purple (Highest Priority: Fin-Fit)
-          '#7C3AED', // Mid Purple (GlassBox Tracker)
-          '#A78BFA', // Light Purple (Dollar-Dream Meter)
-          '#C4B5FD', // Soft Purple (Future-Mate Pods)
-          '#EDE9FE'  // Faint Purple (AI SOP Evaluator - High Effort/Lower Confidence)
+          'rgba(99, 102, 241, 0.8)',
+          'rgba(139, 92, 246, 0.8)',
+          'rgba(168, 85, 247, 0.8)',
+          'rgba(192, 132, 252, 0.8)',
+          'rgba(221, 214, 254, 0.8)'
         ],
-        borderRadius: 4,
+        borderColor: [
+          '#6366F1',
+          '#8B5CF6',
+          '#A855F7',
+          '#C084FC',
+          '#DDD6FE'
+        ],
+        borderWidth: 2,
+        borderRadius: 6,
       }
     ]
   };
@@ -197,6 +203,11 @@ const Index = () => {
         display: false
       },
       tooltip: {
+        backgroundColor: 'rgba(15, 23, 42, 0.95)',
+        titleColor: '#E2E8F0',
+        bodyColor: '#E2E8F0',
+        borderColor: '#6366F1',
+        borderWidth: 1,
         callbacks: {
           label: function(context: any) {
             return `RICE Score: ${context.raw}`;
@@ -209,14 +220,18 @@ const Index = () => {
         beginAtZero: true,
         max: 100,
         ticks: {
-          color: '#4B5563'
+          color: '#94A3B8',
+          font: { size: 12 }
         },
         grid: {
-          color: '#E5E7EB'
+          color: 'rgba(148, 163, 184, 0.1)'
         }
       },
       x: {
-        ticks: { color: '#4B5563', font: { size: 12 } },
+        ticks: { 
+          color: '#94A3B8', 
+          font: { size: 11 } 
+        },
         grid: {
           display: false
         }
@@ -224,40 +239,68 @@ const Index = () => {
     }
   };
 
-  // Color map for Tailwind classes
-  const colorMap = {
+  // Dark mode color map
+  const colorMap: { [key: string]: { border: string; text: string; bg: string; textBg: string; italic: string } } = {
     green: {
-      border: "border-green-400",
-      text: "text-green-700",
-      bg: "bg-green-50",
-      textBg: "text-green-800",
-      italic: "text-green-600"
+      border: "border-emerald-400",
+      text: "text-emerald-300",
+      bg: "bg-emerald-500/10",
+      textBg: "text-emerald-200",
+      italic: "text-emerald-400"
     },
     blue: {
-      border: "border-blue-400",
-      text: "text-blue-700",
-      bg: "bg-blue-50",
-      textBg: "text-blue-800",
-      italic: "text-blue-600"
+      border: "border-cyan-400",
+      text: "text-cyan-300",
+      bg: "bg-cyan-500/10",
+      textBg: "text-cyan-200",
+      italic: "text-cyan-400"
+    },
+    cyan: {
+      border: "border-cyan-400",
+      text: "text-cyan-300",
+      bg: "bg-cyan-500/10",
+      textBg: "text-cyan-200",
+      italic: "text-cyan-400"
     },
     pink: {
       border: "border-pink-400",
-      text: "text-pink-700",
-      bg: "bg-pink-50",
-      textBg: "text-pink-800",
-      italic: "text-pink-600"
+      text: "text-pink-300",
+      bg: "bg-pink-500/10",
+      textBg: "text-pink-200",
+      italic: "text-pink-400"
     },
     yellow: {
-      border: "border-yellow-400",
-      text: "text-yellow-700",
-      bg: "bg-yellow-50",
-      textBg: "text-yellow-800",
-      italic: "text-yellow-600"
+      border: "border-amber-400",
+      text: "text-amber-300",
+      bg: "bg-amber-500/10",
+      textBg: "text-amber-200",
+      italic: "text-amber-400"
+    },
+    amber: {
+      border: "border-amber-400",
+      text: "text-amber-300",
+      bg: "bg-amber-500/10",
+      textBg: "text-amber-200",
+      italic: "text-amber-400"
+    },
+    purple: {
+      border: "border-purple-400",
+      text: "text-purple-300",
+      bg: "bg-purple-500/10",
+      textBg: "text-purple-200",
+      italic: "text-purple-400"
+    },
+    emerald: {
+      border: "border-emerald-400",
+      text: "text-emerald-300",
+      bg: "bg-emerald-500/10",
+      textBg: "text-emerald-200",
+      italic: "text-emerald-400"
     }
   };
 
   return (
-    <div className="bg-slate-50 text-slate-800 font-inter">
+    <div className="bg-slate-950 text-slate-100 font-inter min-h-screen">
       <style dangerouslySetInnerHTML={{
         __html: `
           .chart-container { 
@@ -280,7 +323,7 @@ const Index = () => {
           }
           .nav-link {
             position: relative;
-            transition: color 0.3s;
+            transition: all 0.3s;
           }
           .nav-link::after {
             content: '';
@@ -289,7 +332,7 @@ const Index = () => {
             bottom: 0;
             width: 100%;
             height: 2px;
-            background: #a78bfa;
+            background: linear-gradient(90deg, #6366F1, #8B5CF6);
             border-radius: 2px;
             transform: scaleX(0);
             transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
@@ -297,6 +340,12 @@ const Index = () => {
           }
           .nav-link:hover::after, .nav-link.active::after {
             transform: scaleX(1);
+          }
+          .nav-link:hover {
+            color: #E2E8F0;
+          }
+          .nav-link.active {
+            color: #E2E8F0;
           }
           .phase-card::before { 
             content: ''; 
@@ -306,10 +355,11 @@ const Index = () => {
             transform: translateY(-50%); 
             width: 1.25rem; 
             height: 1.25rem; 
-            background-color: #F3F4F6; 
-            border: 4px solid #4B5563; 
+            background-color: #1E293B; 
+            border: 4px solid #6366F1; 
             border-radius: 9999px; 
-            z-index: 10; 
+            z-index: 10;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
           }
           .timeline::before { 
             content: ''; 
@@ -318,35 +368,43 @@ const Index = () => {
             bottom: 0; 
             left: 1rem; 
             transform: translateX(-50%); 
-            width: 4px; 
-            background-color: #E5E7EB; 
+            width: 2px; 
+            background: linear-gradient(180deg, #6366F1, #8B5CF6);
             border-radius: 2px; 
+          }
+          .glow-card {
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.1), 0 0 40px rgba(99, 102, 241, 0.05);
+          }
+          .glow-card:hover {
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.2), 0 0 60px rgba(99, 102, 241, 0.1);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
           }
         `
       }} />
 
-      <header id="top" className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg shadow-sm">
+      <header id="top" className="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-xl border-b border-slate-800/50 shadow-lg shadow-slate-900/50">
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
-              <span className="font-bold text-xl text-slate-900">{content.siteTitle}</span>
+              <span className="font-bold text-xl bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">{content.siteTitle}</span>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <div className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-600" onClick={handleNavClick1}>Overview</div>
-                <a href="#problem" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-600" onClick={handleNavClick}>The Problem</a>
-                <a href="#solution" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-600" onClick={handleNavClick}>Solution</a>
-                <a href="#prioritization" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-600" onClick={handleNavClick}>Prioritization</a>
-                <a href="#roadmap" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-600" onClick={handleNavClick}>Roadmap</a>
-                <a href="#success-metrics" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-600" onClick={handleNavClick}>Success Metrics</a>
-                <a href="#next-steps" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-600" onClick={handleNavClick}>Next Steps</a>
-                <a href="#about-me" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-600" onClick={handleNavClick}>About Me</a>
+                <div className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick1}>Overview</div>
+                <a href="#problem" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>The Problem</a>
+                <a href="#solution" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Solution</a>
+                <a href="#prioritization" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Prioritization</a>
+                <a href="#roadmap" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Roadmap</a>
+                <a href="#success-metrics" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Success Metrics</a>
+                <a href="#next-steps" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Next Steps</a>
+                <a href="#about-me" className="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>About Me</a>
               </div>
             </div>
             <div className="md:hidden">
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-slate-800 hover:bg-slate-100 focus:outline-none"
+                className="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-slate-200 hover:bg-slate-800 focus:outline-none"
               >
                 <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -356,70 +414,77 @@ const Index = () => {
           </div>
         </nav>
         <div className={`md:hidden ${mobileMenuOpen ? '' : 'hidden'}`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#overview" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600" onClick={handleNavClick}>Overview</a>
-            <a href="#problem" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600" onClick={handleNavClick}>The Problem</a>
-            <a href="#solution" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600" onClick={handleNavClick}>Solution</a>
-            <a href="#prioritization" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600" onClick={handleNavClick}>Prioritization</a>
-            <a href="#roadmap" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600" onClick={handleNavClick}>Roadmap</a>
-            <a href="#success-metrics" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600" onClick={handleNavClick}>Success Metrics</a>
-            <a href="#next-steps" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600" onClick={handleNavClick}>Next Steps</a>
-            <a href="#about-me" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600" onClick={handleNavClick}>About Me</a>
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-900 border-t border-slate-800">
+            <a href="#overview" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Overview</a>
+            <a href="#problem" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>The Problem</a>
+            <a href="#solution" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Solution</a>
+            <a href="#prioritization" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Prioritization</a>
+            <a href="#roadmap" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Roadmap</a>
+            <a href="#success-metrics" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Success Metrics</a>
+            <a href="#next-steps" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>Next Steps</a>
+            <a href="#about-me" className="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-400 hover:text-slate-200" onClick={handleNavClick}>About Me</a>
           </div>
         </div>
       </header>
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <section className="text-center pt-8 pb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight">
-            {(() => {
-              const headline = content.hero.headline;
-              return <span>{headline}</span>;
-            })()}
+          <div className="mb-6">
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full text-cyan-300 text-sm font-semibold mb-4">
+              {content.hero.tagline}
+            </span>
+          </div>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              {content.hero.headline}
+            </span>
           </h1>
-          <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-slate-600">
+          <p className="mt-6 max-w-3xl mx-auto text-xl md:text-2xl text-slate-300 leading-relaxed">
             {content.hero.subheadline}
           </p>
         </section>
 
         {/* PM Section */}
-        <section className="py-12 bg-gradient-to-r from-purple-100 to-purple-50 rounded-2xl shadow-lg mb-10">
+        <section className="py-12 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl shadow-2xl glow-card border border-slate-700/50 mb-10">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-2xl font-bold text-purple-700 mb-4">{content.pmSection.title}</h2>
-            <p className="text-lg md:text-xl text-slate-700 mb-6">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">{content.pmSection.title}</h2>
+            <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
               {content.pmSection.body}
             </p>
-            <a href="#problem" className="inline-block mt-2 px-6 py-2 bg-purple-500 text-white font-semibold rounded-lg shadow hover:bg-purple-600 transition" onClick={handleNavClick}>{content.pmSection.cta}</a>
+            <a href="#problem" className="inline-block mt-2 px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300" onClick={handleNavClick}>{content.pmSection.cta}</a>
           </div>
         </section>
 
-        {/* What is Jar */}
-        <section id="overview" ref={el => (routeRefs.current['overview'] = el)} className="py-16 bg-white rounded-2xl shadow-lg scroll-mt-20">
+        {/* What is Evidence */}
+        <section id="overview" ref={el => (routeRefs.current['overview'] = el)} className="py-16 bg-slate-900/50 rounded-3xl shadow-xl glow-card border border-slate-800/50 scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h2 className="text-base font-semibold text-purple-600 tracking-wide uppercase">{content.about.sectionTitle}</h2>
-              <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">{content.about.title}</p>
+            <div className="text-center mb-12">
+              <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">{content.about.sectionTitle}</h2>
+              <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl">{content.about.title}</p>
             </div>
 
             <div className="mt-12 grid gap-8 md:grid-cols-2">
-              <div>
-                <h3 className="text-2xl font-bold text-slate-800 mb-4">{content.about.aboutTitle}</h3>
-                <p className="text-slate-600 leading-relaxed mb-4">
+              <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
+                <h3 className="text-2xl font-bold text-cyan-300 mb-4">{content.about.aboutTitle}</h3>
+                <p className="text-slate-300 leading-relaxed mb-4">
                   {content.about.aboutBody}
                 </p>
-                <p className="text-slate-600 leading-relaxed">
-                  <strong>{content.about.goal.split('?')[0]}?</strong> {content.about.goal.replace('The goal? ', '')}
+                <p className="text-slate-300 leading-relaxed">
+                  <strong className="text-cyan-400">{content.about.goal.split('?')[0]}?</strong> {content.about.goal.replace('The goal? ', '')}
                 </p>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-slate-800 mb-4">{content.about.industryTitle}</h3>
-                <ul className="space-y-3 text-slate-600">
+              <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
+                <h3 className="text-2xl font-bold text-purple-300 mb-4">{content.about.industryTitle}</h3>
+                <ul className="space-y-3 text-slate-300 mb-6">
                   {content.about.industryBullets.map((bullet, index) => (
-                    <li key={index}>• {bullet}</li>
+                    <li key={index} className="flex items-start">
+                      <span className="text-cyan-400 mr-2">•</span>
+                      <span>{bullet}</span>
+                    </li>
                   ))}
                 </ul>
-                <div className="mt-6 p-4 bg-purple-50 rounded-lg">
-                  <p className="text-sm text-purple-700 font-medium">
+                <div className="mt-6 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg border border-cyan-500/20">
+                  <p className="text-sm text-cyan-200 font-medium">
                     {content.about.mission}
                   </p>
                 </div>
@@ -431,33 +496,33 @@ const Index = () => {
         {/* Customer Needs */}
         <section className="py-16 scroll-mt-20">
           <div className="text-center mb-12">
-            <h2 className="text-base font-semibold text-purple-600 tracking-wide uppercase">2️⃣ & 3️⃣ Customer Identification & Goals</h2>
-            <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">Understanding Our Users</p>
+            <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">2️⃣ & 3️⃣ Customer Identification & Goals</h2>
+            <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl">Understanding Our Users</p>
           </div>
           <div className="flex flex-col md:flex-row gap-8">
-            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md mb-6 md:mb-0 w-full md:w-3/5">
-              <h3 className="text-lg sm:text-xl font-bold text-purple-700 mb-2 sm:mb-4">User Segments</h3>
-              <ul className="ml-4 list-disc text-slate-700 mb-6">
+            <div className="bg-slate-900/50 p-6 sm:p-8 rounded-2xl shadow-xl glow-card border border-slate-700/50 mb-6 md:mb-0 w-full md:w-3/5">
+              <h3 className="text-xl sm:text-2xl font-bold text-cyan-300 mb-4">User Segments</h3>
+              <ul className="ml-4 list-disc text-slate-300 mb-6 space-y-2">
                 {content.userSegments.map((segment, index) => (
                   <li key={index}>{segment}</li>
                 ))}
               </ul>
-              <h3 className="text-lg sm:text-xl font-bold text-purple-700 mb-2">User Goals</h3>
-              <ul className="ml-4 list-disc text-slate-700 mb-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-purple-300 mb-4">User Goals</h3>
+              <ul className="ml-4 list-disc text-slate-300 mb-6 space-y-2">
                 {content.userGoals.map((goal, index) => (
                   <li key={index}>{goal}</li>
                 ))}
               </ul>
-              <h3 className="text-lg sm:text-xl font-bold text-purple-700 mb-2">Our Business Focus</h3>
-              <ul className="ml-4 list-disc text-slate-700">
+              <h3 className="text-xl sm:text-2xl font-bold text-pink-300 mb-4">Our Business Focus</h3>
+              <ul className="ml-4 list-disc text-slate-300 space-y-2">
                 {content.businessFocus.map((focus, index) => (
                   <li key={index}>{focus}</li>
                 ))}
               </ul>
             </div>
-            <div className="p-4 sm:p-6 rounded-lg flex flex-col items-center justify-center w-full md:w-2/5">
-              <h3 className="text-center text-lg sm:text-xl font-semibold text-slate-800 mb-2">Client Preferences</h3>
-              <p className="text-center text-slate-500 mb-4 text-base">{content.clientPreferences.description}</p>
+            <div className="p-6 sm:p-8 rounded-2xl bg-slate-900/50 border border-slate-700/50 flex flex-col items-center justify-center w-full md:w-2/5">
+              <h3 className="text-center text-xl sm:text-2xl font-semibold text-slate-100 mb-2">Client Preferences</h3>
+              <p className="text-center text-slate-400 mb-6 text-base">{content.clientPreferences.description}</p>
               <div className="w-full max-w-xs sm:max-w-md md:max-w-full chart-container">
                 <Chart type="doughnut" data={demandChartData} options={demandChartOptions} />
               </div>
@@ -466,25 +531,30 @@ const Index = () => {
         </section>
 
         {/* Problem Framing */}
-        <section id="problem" ref={el => (routeRefs.current['problem'] = el)} className="py-16 bg-white rounded-2xl shadow-lg scroll-mt-20">
+        <section id="problem" ref={el => (routeRefs.current['problem'] = el)} className="py-16 bg-slate-900/50 rounded-3xl shadow-xl glow-card border border-slate-800/50 scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h2 className="text-base font-semibold text-purple-600 tracking-wide uppercase mb-2">4️⃣ Cut (Prioritize) – Problem Framing</h2>
-              <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl mb-8">Top Pain Points</p>
+            <div className="text-center mb-12">
+              <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">4️⃣ Cut (Prioritize) – Problem Framing</h2>
+              <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl mb-8">Top Pain Points</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {content.topPainPoints.map((point, index) => {
-                const colorOrder = ['green', 'blue', 'pink', 'yellow'];
+                const colorOrder = ['cyan', 'purple', 'pink', 'amber', 'emerald'];
                 const color = colorOrder[index % colorOrder.length];
-                const c = colorMap[color];
+                const c = colorMap[color] || colorMap.cyan;
                 return (
                   <div
                     key={index}
-                    className={`bg-white shadow-lg rounded-2xl p-6 border-l-4 ${c.border}`}
+                    className={`bg-slate-800/50 shadow-xl rounded-2xl p-6 border-l-4 ${c.border} glow-card hover:border-opacity-100 transition-all`}
                   >
-                    <h3 className={`text-lg font-bold ${c.text} mb-2 flex items-center`}><span className="text-2xl mr-2">{point.emoji}</span>{point.title}</h3>
-                    <p className="text-slate-700 mb-2"><span className="font-semibold">Problem:</span> {point.problem}</p>
-                    <p className={`italic ${c.italic}`}>Friction: {point.friction}</p>
+                    <h3 className={`text-lg font-bold ${c.text} mb-3 flex items-center`}>
+                      <span className="text-2xl mr-3">{point.emoji}</span>
+                      {point.title}
+                    </h3>
+                    <p className="text-slate-300 mb-3">
+                      <span className="font-semibold text-slate-200">Problem:</span> {point.problem}
+                    </p>
+                    <p className={`italic ${c.italic} text-sm`}>Friction: {point.friction}</p>
                   </div>
                 );
               })}
@@ -495,24 +565,36 @@ const Index = () => {
         {/* Solution */}
         <section id="solution" ref={el => (routeRefs.current['solution'] = el)} className="py-16 scroll-mt-20">
           <div className="text-center mb-12">
-            <h2 className="text-base font-semibold text-purple-600 tracking-wide uppercase">5️⃣ Proposed Solutions</h2>
-            <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">How {content.hero.headline} Solves These Pain Points</p>
+            <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">5️⃣ Proposed Solutions</h2>
+            <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl">How {content.hero.headline} Solves These Pain Points</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {content.proposedSolutions.map((solution, index) => {
-              const colorOrder = ['green', 'blue', 'pink', 'yellow'];
+              const colorOrder = ['cyan', 'purple', 'pink', 'amber'];
               const color = colorOrder[index % colorOrder.length];
-              const c = colorMap[color];
+              const c = colorMap[color] || colorMap.cyan;
               return (
                 <div
                   key={index}
-                  className={`bg-white shadow-lg rounded-2xl p-6 border-l-4 ${c.border}`}
+                  className={`bg-slate-900/50 shadow-xl rounded-2xl p-6 border-l-4 ${c.border} glow-card hover:border-opacity-100 transition-all`}
                 >
-                  <h3 className={`text-lg font-bold ${c.text} mb-2 flex items-center`}><span className="text-2xl mr-2">{solution.emoji}</span>{solution.title}</h3>
-                  <div className={`mb-2`}><span className={`font-semibold ${c.text}`}>Solution:</span> {solution.solution}</div>
-                  <div className="mb-2"><span className="font-semibold">What It Does:</span> {solution.whatItDoes}</div>
-                  <div className="mb-2"><span className="font-semibold">Why It Helps:</span> {solution.whyItHelps}</div>
-                  <div className={`${c.bg} rounded p-3 mt-2 ${c.textBg} text-sm italic`}>{solution.example}</div>
+                  <h3 className={`text-lg font-bold ${c.text} mb-3 flex items-center`}>
+                    <span className="text-2xl mr-3">{solution.emoji}</span>
+                    {solution.title}
+                  </h3>
+                  <div className="mb-3">
+                    <span className={`font-semibold ${c.text}`}>Solution:</span>
+                    <span className="text-slate-300 ml-2">{solution.solution}</span>
+                  </div>
+                  <div className="mb-3 text-slate-300">
+                    <span className="font-semibold text-slate-200">What It Does:</span> {solution.whatItDoes}
+                  </div>
+                  <div className="mb-3 text-slate-300">
+                    <span className="font-semibold text-slate-200">Why It Helps:</span> {solution.whyItHelps}
+                  </div>
+                  <div className={`${c.bg} rounded-lg p-4 mt-4 ${c.textBg} text-sm italic border ${c.border} border-opacity-30`}>
+                    {solution.example}
+                  </div>
                 </div>
               );
             })}
@@ -520,21 +602,21 @@ const Index = () => {
         </section>
 
         {/* RICE Prioritization */}
-        <section id="prioritization" ref={el => (routeRefs.current['prioritization'] = el)} className="py-16 bg-white rounded-2xl shadow-lg scroll-mt-20">
+        <section id="prioritization" ref={el => (routeRefs.current['prioritization'] = el)} className="py-16 bg-slate-900/50 rounded-3xl shadow-xl glow-card border border-slate-800/50 scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h2 className="text-base font-semibold text-purple-600 tracking-wide uppercase">6️⃣ Evaluate Trade-offs (RICE Framework)</h2>
-              <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">Feature Prioritization</p>
+            <div className="text-center mb-12">
+              <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">6️⃣ Evaluate Trade-offs (RICE Framework)</h2>
+              <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl">Feature Prioritization</p>
             </div>
             <div className="mt-12">
-              <div className="rice-chart-container mb-8">
+              <div className="rice-chart-container mb-8 bg-slate-800/30 p-6 rounded-2xl border border-slate-700/50">
                 <Chart type="bar" data={riceChartData} options={riceChartOptions} />
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {content.featurePrioritization.map((feature, index) => (
-                  <div key={index} className="bg-purple-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-purple-800">{feature.title}</h4>
-                    <p className="text-purple-700">{feature.description}</p>
+                  <div key={index} className="bg-slate-800/50 p-5 rounded-xl border border-slate-700/50 glow-card">
+                    <h4 className="font-semibold text-purple-300 mb-2">{feature.title}</h4>
+                    <p className="text-slate-300 text-sm">{feature.description}</p>
                   </div>
                 ))}
               </div>
@@ -545,29 +627,35 @@ const Index = () => {
         {/* Roadmap */}
         <section id="roadmap" ref={el => (routeRefs.current['roadmap'] = el)} className="py-16 scroll-mt-20">
           <div className="text-center mb-12">
-            <h2 className="text-base font-semibold text-purple-600 tracking-wide uppercase">{content.finalRecommendation.title}</h2>
-            <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">{content.finalRecommendation.subtitle}</p>
+            <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">{content.finalRecommendation.title}</h2>
+            <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl">{content.finalRecommendation.subtitle}</p>
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="relative pl-12 timeline">
               <div className="mb-10 relative">
-                <div className="phase-card bg-green-50 p-6 rounded-lg shadow-sm border-l-4 border-green-400">
-                  <p className="text-sm font-semibold text-green-600">🔹 Phase 1: Quick Wins (3–6 months)</p>
-                  <h4 className="font-bold text-lg mt-1 text-slate-800">Core Foundation & Engagement Loops</h4>
-                  <ul className="mt-2 text-slate-600 space-y-1 text-sm">
+                <div className="phase-card bg-gradient-to-br from-emerald-900/30 to-emerald-800/20 p-6 rounded-xl shadow-xl border-l-4 border-emerald-400 glow-card">
+                  <p className="text-sm font-semibold text-emerald-300 mb-2">🔹 Phase 1: Quick Wins (3–6 months)</p>
+                  <h4 className="font-bold text-lg mt-1 text-slate-100 mb-3">Core Foundation & Engagement Loops</h4>
+                  <ul className="mt-2 text-slate-300 space-y-1 text-sm">
                     {content.finalRecommendation.quickWins.map((win, index) => (
-                      <li key={index}>• {win}</li>
+                      <li key={index} className="flex items-start">
+                        <span className="text-emerald-400 mr-2">•</span>
+                        <span>{win}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
               </div>
               <div className="relative">
-                <div className="phase-card bg-yellow-50 p-6 rounded-lg shadow-sm border-l-4 border-yellow-400">
-                  <p className="text-sm font-semibold text-yellow-600">🔹 Phase 2: Long-term (6–18 months)</p>
-                  <h4 className="font-bold text-lg mt-1 text-slate-800">AI-Driven Personalization & Placement Acceleration</h4>
-                  <ul className="mt-2 text-slate-600 space-y-1 text-sm">
+                <div className="phase-card bg-gradient-to-br from-amber-900/30 to-amber-800/20 p-6 rounded-xl shadow-xl border-l-4 border-amber-400 glow-card">
+                  <p className="text-sm font-semibold text-amber-300 mb-2">🔹 Phase 2: Long-term (6–18 months)</p>
+                  <h4 className="font-bold text-lg mt-1 text-slate-100 mb-3">AI-Driven Personalization & Placement Acceleration</h4>
+                  <ul className="mt-2 text-slate-300 space-y-1 text-sm">
                     {content.finalRecommendation.longTermBets.map((bet, index) => (
-                      <li key={index}>• {bet}</li>
+                      <li key={index} className="flex items-start">
+                        <span className="text-amber-400 mr-2">•</span>
+                        <span>{bet}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -577,19 +665,22 @@ const Index = () => {
         </section>
 
         {/* Success Metrics */}
-        <section id="success-metrics" ref={el => (routeRefs.current['success-metrics'] = el)} className="py-16 bg-white rounded-2xl shadow-lg">
+        <section id="success-metrics" ref={el => (routeRefs.current['success-metrics'] = el)} className="py-16 bg-slate-900/50 rounded-3xl shadow-xl glow-card border border-slate-800/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-base font-semibold text-purple-600 tracking-wide uppercase">8️⃣ SUCCESS METRICS</h2>
-              <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">Measuring Our Success</p>
+              <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">8️⃣ SUCCESS METRICS</h2>
+              <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl">Measuring Our Success</p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-6">
               {content.successMetrics.map((metric, index) => (
-                <div key={index} className="bg-purple-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-purple-800 mb-3">{metric.title}</h3>
-                  <ul className="text-purple-700 space-y-2 text-sm">
+                <div key={index} className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 glow-card">
+                  <h3 className="text-xl font-semibold text-cyan-300 mb-4">{metric.title}</h3>
+                  <ul className="text-slate-300 space-y-2 text-sm">
                     {metric.metrics.map((item, itemIndex) => (
-                      <li key={itemIndex}>• {item}</li>
+                      <li key={itemIndex} className="flex items-start">
+                        <span className="text-cyan-400 mr-2">•</span>
+                        <span>{item}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -602,15 +693,15 @@ const Index = () => {
         <section id="next-steps" ref={el => (routeRefs.current['next-steps'] = el)} className="py-16 scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-base font-semibold text-purple-600 tracking-wide uppercase mb-2">9️⃣ NEXT STEPS</h2>
-              <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl mb-10">If I Were the PM</p>
+              <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">9️⃣ NEXT STEPS</h2>
+              <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl mb-10">If I Were the PM</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-left w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left w-full">
               {content.nextSteps.map((step, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-10 flex flex-col items-start border-2 border-purple-100 text-left w-full">
+                <div key={index} className="bg-slate-900/50 rounded-xl shadow-xl p-8 flex flex-col items-start border border-slate-700/50 glow-card hover:border-cyan-500/50 transition-all">
                   <span className="text-4xl mb-4">{step.icon}</span>
-                  <h3 className="text-xl font-bold text-purple-700 mb-2">{step.title}</h3>
-                  <p className="text-slate-700 text-base">{step.description}</p>
+                  <h3 className="text-xl font-bold text-cyan-300 mb-3">{step.title}</h3>
+                  <p className="text-slate-300 text-base leading-relaxed">{step.description}</p>
                 </div>
               ))}
             </div>
@@ -618,27 +709,34 @@ const Index = () => {
         </section>
 
         {/* About Me */}
-        <section id="about-me" ref={el => (routeRefs.current['about-me'] = el)} className="py-24 bg-white rounded-2xl shadow-lg">
+        <section id="about-me" ref={el => (routeRefs.current['about-me'] = el)} className="py-24 bg-slate-900/50 rounded-3xl shadow-xl glow-card border border-slate-800/50">
           <div className="max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center gap-16 md:gap-24">
             <div className="flex-shrink-0 flex justify-center w-full md:w-auto mb-10 md:mb-0">
-              <img src={profileImg} alt="Anish Guruvelli Professional" className="w-56 h-56 rounded-full object-cover shadow-lg border-8 border-purple-100" />
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur-xl opacity-50"></div>
+                <img src={profileImg} alt="Anish Guruvelli Professional" className="relative w-56 h-56 rounded-full object-cover shadow-2xl border-4 border-slate-700" />
+              </div>
             </div>
             <div className="flex-1 w-full">
-              <h2 className="text-3xl font-extrabold text-slate-900 mb-4">About Me</h2>
-              <p className="text-lg text-slate-700 mb-3">Currently Agentic AI SPA @ Unifyapps</p>
-              <p className="text-slate-700 mb-8 text-base md:text-lg">
+              <h2 className="text-4xl font-extrabold text-slate-100 mb-4">About Me</h2>
+              <p className="text-xl text-cyan-300 mb-3 font-semibold">Currently Agentic AI SPA @ Unifyapps</p>
+              <p className="text-lg text-slate-300 mb-8 leading-relaxed">
                 {content.aboutMeDescription}
               </p>
-              <h3 className="text-2xl font-bold text-purple-600 mb-4">Key Skills Highlight</h3>
-              <ul className="space-y-6 mb-8 text-slate-800 text-base md:text-lg">
+              <h3 className="text-2xl font-bold text-purple-300 mb-4">Key Skills Highlight</h3>
+              <ul className="space-y-4 mb-8 text-slate-300 text-base md:text-lg">
                 {content.keySkills.map((skill, index) => (
-                  <li key={index}><span className="font-bold">{skill.title}</span><br />{skill.description}</li>
+                  <li key={index} className="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50">
+                    <span className="font-bold text-cyan-300">{skill.title}</span>
+                    <br />
+                    <span className="text-slate-300">{skill.description}</span>
+                  </li>
                 ))}
               </ul>
-              <div className="flex flex-col sm:flex-row gap-6 mt-8">
-                <a href={content.linkedinUrl} target="_blank" rel="noopener noreferrer" className="px-7 py-3 bg-purple-500 text-white font-semibold rounded-lg shadow hover:bg-purple-600 transition text-lg">🔗 Connect on LinkedIn</a>
-                <a href={content.resumeUrl} target="_blank" rel="noopener noreferrer" className="px-7 py-3 bg-slate-800 text-white font-semibold rounded-lg shadow hover:bg-slate-900 transition text-lg">📄 View My Resume</a>
-                <a href={content.chitxUrl} target="_blank" rel="noopener noreferrer" className="px-7 py-3 bg-purple-500 text-white font-semibold rounded-lg shadow hover:bg-purple-600 transition text-lg">📱 Download ChitX</a>
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                <a href={content.linkedinUrl} target="_blank" rel="noopener noreferrer" className="px-7 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300 text-center">🔗 Connect on LinkedIn</a>
+                <a href={content.resumeUrl} target="_blank" rel="noopener noreferrer" className="px-7 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-purple-500/50 hover:scale-105 transition-all duration-300 text-center">📄 View My Resume</a>
+                <a href={content.chitxUrl} target="_blank" rel="noopener noreferrer" className="px-7 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300 text-center">📱 Download ChitX</a>
               </div>
             </div>
           </div>

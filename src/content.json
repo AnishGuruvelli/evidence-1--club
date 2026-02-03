@@ -1,260 +1,384 @@
 {
-  "siteTitle": "Leap Case Study",
+  "siteTitle": "Evidence — 1% Club Case Study",
   "nav": {
     "overview": "Overview",
     "problem": "The Problem",
-    "solution": "Solution",
-    "prioritization": "Prioritization",
+    "solution": "MVP Solution",
+    "prioritization": "Features",
     "roadmap": "Roadmap",
-    "successMetrics": "Success Metrics",
-    "nextSteps": "Next Steps",
-    "aboutMe": "About Me"
+    "successMetrics": "Metrics",
+    "nextSteps": "Go-to-Market",
+    "aboutMe": "About"
   },
   "hero": {
-    "headline": "Leap GPS – The Global Pathway System",
-    "subheadline": "Unifying IELTS Prep, University Applications, and Financial Eligibility into a single source of truth for the modern international student."
+    "headline": "Evidence",
+    "subheadline": "LinkedIn shows where you worked. Evidence shows how you work.",
+    "tagline": "A network where work is the primitive for identity, conversation, discovery, and opportunity."
   },
   "pmSection": {
-    "title": "🎯 Integrated Success: Senior PM Case Study for Leap",
-    "body": "Identified the “Study Abroad Black Box”—a fragmented student journey across test prep, university selection, and financing. Conceptualized Leap GPS (Global Pathway System) to unify LeapScholar and LeapFinance into a single, data-driven pathway. Built as an extra-mile case study to demonstrate structured problem-solving, product judgment under ambiguity, and AI-first thinking. While conceptual, it showcases my ability to turn high-anxiety, siloed journeys into transparent decision frameworks.",
-    "cta": "Explore the Strategy →"
+    "title": "The Complete Loop",
+    "body": "Evidence is not \"portfolio social media\". It is a network where work is the primitive for identity, conversation, discovery, and opportunity. Post work → People discover → People talk → People collaborate → Opportunities happen → Reputation compounds. Together: Post work → Get discovered → Start project talk → Build reputation → Get opportunities. That's Evidence.",
+    "cta": "Explore the Product →"
   },
   "about": {
-    "sectionTitle": "1️⃣ Comprehend the Situation",
-    "title": "What is Leap?",
-    "aboutTitle": "About Leap (LeapScholar & LeapFinance)",
-    "aboutBody": "Leap is the world’s largest end-to-end platform for international education. It offers a comprehensive suite of products including IELTS test prep, university counseling, visa assistance, and specialized financial products via LeapFinance. By combining edtech and fintech, Leap aims to democratize access to global education for thousands of students annually.",
-    "goal": "The goal? Eliminate the fragmentation in the study-abroad journey by creating a unified 'Command Center' that aligns a student's academic profile with their financial reality.",
-    "industryTitle": "The Fragmented Market Opportunity",
+    "sectionTitle": "1️⃣ Problem Framing",
+    "title": "What's Broken Today?",
+    "aboutTitle": "Why Existing Solutions Fail",
+    "aboutBody": "Across platforms like LinkedIn, portfolios, and repos, builders face fundamental problems: work is scattered, conversations lack context, discovery is pedigree-based, and there's no clear pathway from work to opportunity. Evidence solves this by making work the center of everything.",
+    "goal": "The goal? Create a network where proof-of-work drives discovery, conversation, and opportunity—not titles, companies, or connections.",
+    "industryTitle": "The Discovery Gap",
     "industryBullets": [
-      "Students often apply to 'dream' universities only to realize later they cannot secure funding.",
-      "Lack of transparency in the application funnel leads to high anxiety and counselor dependency.",
-      "Post-admission logistics (housing, roommates) remains an offline, unorganized struggle."
+      "Work scattered across GitHub, Drive, Notion, Behance—no single discoverable surface",
+      "No context-rich way to start conversations from a project",
+      "Discovery by title/company, not by what you actually built",
+      "No pathway from work → opportunity (how does a startup find me?)",
+      "Reputation is broken—likes ≠ credibility"
     ],
-    "mission": "Mission: Build a transparent, integrated ecosystem where every student knows their 'Fin-Fit' status and application progress in real-time."
+    "mission": "Mission: Build a network where work is the primitive. If someone clicks \"Discuss this project\", that gives context, removes awkward cold starts, and makes networking about craft—not small talk."
   },
   "userSegments": [
-    "Aspirants in the early discovery phase (IELTS/GRE prep)",
-    "Shortlisters seeking a balance between university prestige and loan eligibility",
-    "Applicants stuck in the 'waiting period' post-submission",
-    "Final-stage students planning their departure (Visa & Housing)"
+    "Gen Z builders (18–25) — students, recent grads, early-career designers, devs, content creators, indie hackers",
+    "Founders looking for craft-first talent",
+    "Startup recruiters seeking proof-of-work",
+    "Mentors discovering emerging builders"
   ],
   "userGoals": [
-    "Identify universities where they are both academically and financially 'Pre-Approved'",
-    "Track application status with 100% transparency to avoid 'counselor ghosting'",
-    "Build a network of peers heading to the same city/university",
-    "Gamify the tedious document-gathering process to stay motivated"
+    "Show real work visually in one discoverable place",
+    "Start context-rich conversations about specific projects",
+    "Get discovered by what they build, not where they worked",
+    "Create a pathway from work → opportunity"
   ],
   "businessFocus": [
-    "Increase 'Attach Rate' between LeapScholar (Counseling) and LeapFinance (Loans)",
-    "Reduce Lead-to-Application cycle time via automated tracking",
-    "Improve User Retention (LTV) by capturing the post-admission community phase",
-    "Drive higher NPS by replacing opaque offline updates with digital transparency",
-    "Maximize Loan Disbursement Value (LDV) by directing users to pre-approved institutions"
+    "Social-first Google + GitHub login (great for devs/builders, no password friction)",
+    "Only videos, minimum 30 seconds",
+    "Work-led discovery and conversation",
+    "Proof-of-work reputation system"
   ],
   "clientPreferences": {
     "labels": [
-      "Prefer Integrated Fin-Fit Guidance",
-      "Rely on Siloed Offline Counselors"
+      "Want to show work visually",
+      "Rely on traditional portfolios/resumes"
     ],
     "values": [
-      82,
-      18
+      78,
+      22
     ],
     "colors": [
       "#00D1FF",
       "#E0E0E0"
     ],
-    "description": "The vast majority of modern students prioritize platforms that offer integrated financial and academic certainty over traditional, siloed counseling."
+    "description": "The vast majority of Gen Z builders prioritize platforms that showcase real work over traditional resume-based discovery."
   },
   "topPainPoints": [
     {
-      "emoji": "📉",
-      "title": "The Financial-Academic Disconnect",
-      "problem": "Students spend months on applications only to face loan rejections or find the cost of living exceeds their budget. LeapFinance and LeapScholar operate as separate entities in the user's mind, leading to misaligned expectations.",
-      "friction": "I got into my dream uni, but I can't get a loan for it. I wish I knew my loan eligibility before I spent $500 on application fees.",
+      "emoji": "📂",
+      "title": "Nowhere to Show Real Work Visually",
+      "problem": "Work scattered across GitHub, Drive, Notion, Behance. No single discoverable surface where builders can showcase their projects in a media-first way.",
+      "friction": "I have 20 projects across 5 platforms. How do I show them all in one place where people can actually find me?",
       "color": "blue"
     },
     {
-      "emoji": "👻",
-      "title": "The 'Black Box' of Application Status",
-      "problem": "Once documents are submitted, students feel 'ghosted.' They rely on WhatsApp pings to counselors for updates, creating a lack of trust and high operational load for the support team.",
-      "friction": "It's been 3 weeks since I sent my SOP. My counselor says 'it's in process,' but I don't know if the university has even received it.",
+      "emoji": "💬",
+      "title": "No Context-Rich Way to Start Conversations",
+      "problem": "Current platforms offer Like/Comment/DM, but no way to say \"I want to talk about THIS build\". Conversations start cold, without context.",
+      "friction": "I want to discuss someone's Figma prototype, but I can only like it or send a generic DM. There's no \"Discuss this project\" button.",
       "color": "pink"
     },
     {
-      "emoji": "🏠",
-      "title": "Post-Admission Isolation",
-      "problem": "After receiving an admit, the journey becomes lonely. Students scramble on Facebook/Telegram groups to find roommates or discuss visa slots, often falling for scams or misinformation.",
-      "friction": "I'm heading to Boston in August, but I don't know anyone else going there. Finding a trustworthy roommate feels like a second full-time job.",
+      "emoji": "🔍",
+      "title": "Hard to Discover Builders by What They Build",
+      "problem": "Discovery is pedigree-based (title/company). Proof-of-work is not indexed. You can't search for \"people who built fintech apps\" or \"designers who made AI tools\".",
+      "friction": "I'm looking for a designer who built a fintech app. LinkedIn shows me people who worked at fintech companies, not people who actually built fintech products.",
       "color": "yellow"
     },
     {
-      "emoji": "🧩",
-      "title": "Document & Milestone Fatigue",
-      "problem": "The process requires 20+ documents (Transcripts, SOPs, LORs, Bank Statements). Without a sense of progress, users feel overwhelmed and drop out of the funnel.",
-      "friction": "There are so many forms to fill. I don't know how much of the journey I've actually covered or what's left.",
+      "emoji": "🚪",
+      "title": "No Pathway from Work → Opportunity",
+      "problem": "If I post great work: How does a startup find me? How does a recruiter find me? How does a founder reach me? Hiring/search is pedigree-based, not work-based.",
+      "friction": "I built an amazing AI tool, but no one knows about it. How do opportunities find me? There's no bridge between my work and potential collaborators.",
       "color": "green"
+    },
+    {
+      "emoji": "⭐",
+      "title": "Reputation is Broken",
+      "problem": "Likes, followers, endorsements don't show credibility. No metric that says: \"This person consistently builds thoughtful things\". Reputation should be proof-of-work based.",
+      "friction": "I have 10K followers but no way to show I actually build quality things. Likes don't equal credibility.",
+      "color": "purple"
     }
   ],
   "proposedSolutions": [
     {
-      "emoji": "⚖️",
-      "title": "Fin-Fit Shortlisting Engine",
-      "solution": "Academic Match + Loan Pre-Approval",
-      "whatItDoes": "A proprietary matching engine that filters universities based on the student's GPA/IELTS score AND their instant LeapFinance credit-check. Only 'Fin-Fit' schools are highlighted as 'High Probability' targets.",
-      "whyItHelps": "Aligns expectations early. Reduces the risk of a student getting an admit they can't fund, thereby increasing LeapFinance conversion rates.",
-      "example": "Based on your 7.5 IELTS and 3.4 GPA, you are pre-approved for a $40k loan at these 12 universities.",
+      "emoji": "🎨",
+      "title": "Proof-of-Work Identity",
+      "solution": "Project Cards Grid on Profile (Media-First)",
+      "whatItDoes": "Standard project template: title, demo video (min 30 sec), 200 chars description, tags. Project cards grid on profile—media-first, not text-first. Your profile is your work, not your resume.",
+      "whyItHelps": "Creates a single discoverable surface. All your work in one place, visually organized. No more scattered portfolios across 5 platforms.",
+      "example": "Riya uploads her Figma fintech prototype. It appears as a media card with video demo, tags (Figma, UX, Fintech), and a 200-char description. Her profile is now her work grid.",
       "color": "blue"
     },
     {
-      "emoji": "📦",
-      "title": "GlassBox Application Tracker",
-      "solution": "Granular, Real-Time Milestone Tracking",
-      "whatItDoes": "A visual timeline replacing 'In Progress' with specific sub-statuses: 'SOP Proofread,' 'LOR Verified,' 'Application Packet Mailed,' 'Uni Portal Acknowledged.' Direct API integrations with partner uni portals where possible.",
-      "whyItHelps": "Builds radical trust. Reduces counselor support tickets and keeps the student engaged within the Leap app ecosystem.",
-      "example": "Status Update: Your application reached Arizona State University's admissions office today at 10:30 AM EST.",
+      "emoji": "👏",
+      "title": "Peer Acknowledgements",
+      "solution": "Credibility Through Craft Recognition",
+      "whatItDoes": "Instead of likes, peers acknowledge projects with specific tags: \"Technically hard\", \"Great craft\", \"Thoughtful idea\". These acknowledgements build reputation—proof that others recognize your work quality.",
+      "whyItHelps": "Reputation is proof-of-work based, not follower-based. Acknowledgements show credibility: \"This person consistently builds thoughtful things\".",
+      "example": "A founder acknowledges Riya's project with \"Great craft\". This acknowledgement appears on her profile, building her reputation.",
       "color": "pink"
     },
     {
-      "emoji": "🤝",
-      "title": "Future-Mate Pods",
-      "solution": "Contextual Community Network",
-      "whatItDoes": "Once a student receives an offer, they are auto-added to a 'Pod' of students for that specific city or intake. Includes verified roommate matching and visa-slot alerts within the pod.",
-      "whyItHelps": "Creates a network effect. Increases app stickiness post-admission and provides a fertile ground for cross-selling Forex cards and travel insurance.",
-      "example": "Meet Rahul and Sneha—they are also heading to NYU this Fall. Connect now to discuss housing in Brooklyn.",
+      "emoji": "💬",
+      "title": "Work-Led Interaction",
+      "solution": "Discuss This Project CTA",
+      "whatItDoes": "Every project has a \"Discuss this project\" button. Clicking it starts a private chat with the project context pinned at the top. No cold starts. No awkward introductions. Just: \"I want to talk about THIS build\".",
+      "whyItHelps": "Gives context to conversations instantly. Removes awkward cold starts. Makes networking about craft, not small talk. That's radically different from a DM.",
+      "example": "Founder clicks \"Discuss this project\" on Riya's Figma prototype. Chat opens with project context pinned. Conversation starts: \"I love your fintech UX. Are you open to freelance?\"",
       "color": "yellow"
     },
     {
-      "emoji": "📊",
-      "title": "Dollar-Dream Meter",
-      "solution": "Gamified Milestone Progress Bar",
-      "whatItDoes": "A progress bar that visualizes the 'Road to the Flight.' Completing milestones (IELTS score upload, Loan Sanction) fills the meter and unlocks rewards like 'Free Forex Card' or 'Flight Voucher.'",
-      "whyItHelps": "Reduces document drop-off. Psychologically rewards the student for every step taken, making a complex process feel like an achievable game.",
-      "example": "You are 85% ready for take-off! Get your visa stamped to unlock your Free Scapia Card / $50 Flight Voucher.",
+      "emoji": "🔍",
+      "title": "Discovery → Opportunity",
+      "solution": "Explore = Projects Only",
+      "whatItDoes": "Explore feed shows projects, not people. Search & tag filters (Figma, AI, Fintech, etc.). \"Open to collaborate / opportunities\" toggle on profile. Discovery is work-led, not pedigree-led.",
+      "whyItHelps": "Builders get discovered by what they build, not where they worked. Founders/recruiters find talent by proof-of-work, not job titles.",
+      "example": "A founder searches \"Figma + Fintech\". Results show all fintech projects built in Figma. They find Riya's project, click \"Discuss\", and offer a freelance trial.",
       "color": "green"
     }
   ],
   "featurePrioritization": [
     {
-      "title": "⚖️ Fin-Fit Shortlisting Engine",
-      "description": "P0: Strategic Core. High impact on both User Value and Business Revenue (LeapFinance attach rates)."
+      "title": "🎨 Proof-of-Work Identity",
+      "description": "P0: Core Foundation. Project cards grid, standard template (title, demo video min 30sec, 200 chars, tags), media-first profile."
     },
     {
-      "title": "📦 GlassBox Application Tracker",
-      "description": "P0: Trust & Retention. Essential to solve the primary user anxiety and reduce operational costs of counseling."
+      "title": "👏 Peer Acknowledgements",
+      "description": "P0: Credibility System. Replace likes with acknowledgements (\"Technically hard\", \"Great craft\", \"Thoughtful idea\"). Build proof-of-work reputation."
     },
     {
-      "title": "📊 Dollar-Dream Meter",
-      "description": "P1: Engagement. Low-to-medium effort that drives document completion and stickiness through rewards."
+      "title": "💬 Discuss This Project",
+      "description": "P0: Work-Led Interaction. Project-tied private chat with context pinned. This is the core differentiator—context-rich conversations."
     },
     {
-      "title": "🤝 Future-Mate Pods",
-      "description": "P2: Social/Network Effect. High value for long-term brand, but requires a critical mass of 'Admitted' students to work."
+      "title": "🔍 Work-Led Discovery",
+      "description": "P0: Discovery Engine. Explore = projects only. Search & tag filters. \"Open to collaborate\" toggle."
+    },
+    {
+      "title": "🔐 Social-First Auth",
+      "description": "P0: Frictionless Onboarding. Google + GitHub login. Great for devs/builders, no password friction."
+    },
+    {
+      "title": "📹 Video-Only Projects",
+      "description": "P0: Media Standard. Only videos, minimum 30 seconds. Ensures quality and visual proof-of-work."
     }
   ],
   "successMetrics": [
     {
-      "title": "📈 Revenue & Cross-Sell",
+      "title": "📈 North Star Metric",
       "metrics": [
-        "Attach Rate: % of Scholar users taking a LeapFinance loan",
-        "Average Loan Disbursement Value (LDV) per user",
-        "Conversion rate from 'Shortlist' to 'Application Submitted'"
+        "Project Discussions per week (primary metric)",
+        "Projects uploaded per user",
+        "Acknowledgements per project",
+        "% discussions leading to repeat conversation"
       ]
     },
     {
-      "title": "⚡ Efficiency & Trust",
+      "title": "⚡ Engagement Metrics",
       "metrics": [
-        "Reduction in 'Status Check' support tickets/WhatsApp pings",
-        "Median time taken to upload required documents (Document Velocity)",
-        "NPS of the application journey vs industry standard"
+        "Week 1: >50% users upload project",
+        "Week 3: Median project gets ≥1 acknowledgement",
+        "Week 6: Discussions growing WoW (week-over-week)"
       ]
     },
     {
-      "title": "🌐 Community & Retention",
+      "title": "🌐 Discovery Metrics",
       "metrics": [
-        "Daily Active Users (DAU) in Future-Mate Pods",
-        "Number of successful 'Roommate Matches' via the platform",
-        "Referral Rate: % of new leads coming from Pod members"
+        "Projects discovered via Explore feed",
+        "Search queries by tag/category",
+        "Projects with \"Open to collaborate\" toggle enabled"
       ]
     }
   ],
   "nextSteps": [
     {
-      "icon": "🗣️",
-      "title": "Integrative Discovery Interviews",
-      "description": "Interview 20+ students who recently received admits to map the exact 'anxiety gap' between university acceptance and loan sanctioning to refine Fin-Fit logic."
+      "icon": "🚀",
+      "title": "Launch Thesis",
+      "description": "\"Stop writing resumes. Show what you built.\" Launch with hackathon partnerships, campus ambassadors, indie hacker communities, and founder/recruiter early access."
     },
     {
-      "icon": "🏗️",
-      "title": "MVP: Fin-Fit Matching Engine",
-      "description": "Develop the backend logic that calculates real-time loan eligibility against the total Cost of Attendance (COA) for 100+ partner universities."
+      "icon": "🔗",
+      "title": "Distribution Loops",
+      "description": "Shareable project links to LinkedIn/Twitter. Featured projects for early adopters. Themed build weeks (AI week, Design week)."
     },
     {
-      "icon": "📦",
-      "title": "GlassBox Status Integration",
-      "description": "Establish automated API triggers between internal counselor CRM systems and the student dashboard to replace manual status updates with real-time tracking."
+      "icon": "👥",
+      "title": "Community Channels",
+      "description": "Hackathon partnerships (submit projects on Evidence). Campus ambassadors program. Indie hacker / Figma / GitHub communities."
     },
     {
-      "icon": "🧪",
-      "title": "Beta Launch: Future-Mate Pods",
-      "description": "Roll out community pods for the 'Fall 2026' cohort heading to London/Boston to test the impact of peer-networking on housing and Forex card adoption."
+      "icon": "📊",
+      "title": "Validation Plan",
+      "description": "25 user interviews: \"Last time you used work to get an opportunity—what was hard?\" Landing page test: \"Show what you built\" vs \"Build your CV\". Prototype test: Upload 20 projects → measure views → acknowledgements → discussions."
     }
   ],
-  "aboutMeDescription": "Technical Product Manager specializing in high-impact AI and Fintech solutions. I bridge the gap between complex engineering and business growth, evidenced by delivering $90K ARR at Unifyapps and securing a ₹13Cr renewal at MoveInSync. With a zero-to-one execution mindset—highlighted by launching ChitX in just 4 days—I thrive on transforming fragmented user journeys into seamless, automated ecosystems like Leap GPS.",
+  "aboutMeDescription": "Product Manager building Evidence—a network where work is the primitive for identity, conversation, discovery, and opportunity. Focused on creating proof-of-work systems that help Gen Z builders get discovered, discussed, and hired because of what they built.",
   "keySkills": [
     {
-      "title": "🤖 AI-First Product Execution",
-      "description": "Expertise in deploying LLMs, Agentic AI, and RAG pipelines to automate complex workflows, reducing manual effort by up to 95% as demonstrated at Unifyapps."
+      "title": "🎯 Product Strategy",
+      "description": "Defining product vision where work is the primitive. Building networks that prioritize proof-of-work over pedigree."
     },
     {
-      "title": "📈 Scalable Fintech UX",
-      "description": "Deep understanding of financial logic (XIRR, Credit, AP lifecycles) and the ability to simplify high-stakes financial data into intuitive, high-adoption interfaces."
+      "title": "🔨 Builder-First Design",
+      "description": "Understanding Gen Z builders' needs: visual work showcase, context-rich conversations, work-led discovery."
     },
     {
-      "title": "⚡ Rapid 0-to-1 Prototyping",
-      "description": "Obsessed with speed-to-market; proficient in using AI-assisted development (Cursor, Lovable) to build, test, and ship production-ready apps in record time."
+      "title": "📊 Metrics-Driven",
+      "description": "North Star: Project Discussions per week. Focused on measuring what matters: work → conversation → opportunity."
     },
     {
-      "title": "🎯 Data-Driven Prioritization",
-      "description": "Skilled in using RICE and multivariate testing to drive measurable outcomes, such as improving site SLAs by 15% and boosting trip ratings from 3.9 to 4.6."
+      "title": "🚀 Go-to-Market",
+      "description": "Launch strategy: hackathons, campus ambassadors, indie hacker communities. Distribution loops via shareable project links."
     }
   ],
   "linkedinUrl": "https://www.linkedin.com/in/anishguruvelli/",
   "resumeUrl": "https://drive.google.com/file/d/14dUymsu49nTGYXmBj4qsy0cs59G3cKSD/view?usp=sharing",
   "chitxUrl": "https://play.google.com/store/apps/details?id=com.anishguruvelli.chitx&pli=1",
+  "userJourney": {
+    "title": "User Journey: Riya's Story",
+    "subtitle": "From Project Upload to Opportunity",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Upload Project",
+        "description": "Riya, 21, built a Figma prototype for a fintech app. She uploads it to Evidence: image + demo video (30+ sec) + tags: Figma, UX, Fintech."
+      },
+      {
+        "step": 2,
+        "title": "Appears in Explore",
+        "description": "Her project appears in the Explore feed. Other builders and founders discover it through tag-based search."
+      },
+      {
+        "step": 3,
+        "title": "Gets Acknowledgement",
+        "description": "A founder acknowledges her project with \"Great craft\". This builds her reputation—proof that others recognize her work quality."
+      },
+      {
+        "step": 4,
+        "title": "Project Discussion",
+        "description": "The founder clicks \"Discuss this project\". A private chat opens with the project context pinned at the top. No cold start."
+      },
+      {
+        "step": 5,
+        "title": "Opportunity",
+        "description": "Founder offers a freelance trial. Conversation was context-rich from the start: \"I love your fintech UX. Are you open to freelance?\""
+      },
+      {
+        "step": 6,
+        "title": "Reputation Builds",
+        "description": "Riya's profile gains acknowledgements. Her reputation compounds. No resume. No referrals. Pure work → opportunity."
+      }
+    ]
+  },
+  "whatsNotIncluded": {
+    "title": "What's NOT Included (By Design)",
+    "items": [
+      "No feed, likes, followers (work-first, not social-first)",
+      "No resume/experience section (profile is your work grid)",
+      "No public comments (private project discussions only)",
+      "No generic DMs (all conversations tied to projects)",
+      "No WIP timeline (V2 feature)"
+    ]
+  },
+  "roadmap": {
+    "title": "Roadmap (6–12 months)",
+    "v2": {
+      "title": "V2 Features",
+      "items": [
+        "WIP timelines (show process, not just finished work)",
+        "Public project discussions (expand beyond private chats)",
+        "Builder reputation score (algorithmic credibility metric)"
+      ]
+    },
+    "v3": {
+      "title": "V3 Features",
+      "items": [
+        "Verified recruiter accounts",
+        "Advanced search (filters, sorting, saved searches)",
+        "Project collections (curate your best work)"
+      ]
+    },
+    "monetization": {
+      "title": "Monetization (No UX Harm)",
+      "description": "Builders never pay. Companies pay to discover.",
+      "items": [
+        "Recruiter/founder search subscription",
+        "Featured project placements (hackathons)",
+        "Optional verification badges"
+      ]
+    }
+  },
+  "validation": {
+    "title": "How We Validate These Are Real Problems",
+    "methods": [
+      {
+        "method": "User Interviews",
+        "description": "25 user interviews: \"Last time you used work to get an opportunity—what was hard?\""
+      },
+      {
+        "method": "Landing Page Test",
+        "description": "\"Show what you built\" vs \"Build your CV\"—measuring conversion and intent"
+      },
+      {
+        "method": "Prototype Test",
+        "description": "Upload 20 projects → measure views → acknowledgements → discussions"
+      },
+      {
+        "method": "Recruiter Interviews",
+        "description": "\"How do you find early talent today?\" Understanding pain points in discovery"
+      }
+    ]
+  },
+  "coreThesis": {
+    "title": "Core Thesis",
+    "body": "Evidence is not \"portfolio social media\". It is a network where work is the primitive for identity, conversation, discovery, and opportunity.",
+    "loop": "Post work → People discover → People talk → People collaborate → Opportunities happen → Reputation compounds",
+    "together": "Post work → Get discovered → Start project talk → Build reputation → Get opportunities. That's Evidence."
+  },
   "finalRecommendation": {
-    "title": "7️⃣ Leap GPS: Strategic Roadmap 2026",
-    "subtitle": "Cracking the Global Education Code",
+    "title": "Roadmap",
+    "subtitle": "Building the Work-First Network",
     "topBets": [
       {
-        "icon": "⚡",
-        "title": "Real-Time Fin-Fit API",
-        "description": "Integration with major credit bureaus to provide 'Loan Confidence Scores' in milliseconds during the search phase."
+        "icon": "📹",
+        "title": "Video-First Projects",
+        "description": "Enforce minimum 30-second videos for all projects. Ensures quality and visual proof-of-work."
       },
       {
-        "icon": "🤖",
-        "title": "AI SOP Evaluator",
-        "description": "Integrating LLMs to give instant feedback on SOPs, accelerating the 'Application Ready' milestone."
+        "icon": "🔐",
+        "title": "Social-First Auth",
+        "description": "Google + GitHub login integration. Zero password friction for devs and builders."
       },
       {
-        "icon": "🌍",
-        "title": "Leap 'Landing' Services",
-        "description": "Expanding the 'Pods' into physical airport pickups and local bank account opening assistance."
+        "icon": "💬",
+        "title": "Project-Tied Conversations",
+        "description": "Core differentiator: \"Discuss this project\" with context pinned. This is what makes Evidence different."
       }
     ],
     "quickWins": [
-      "Launch the GlassBox Tracker dashboard for the top 50 partner universities.",
-      "Introduce the 'Fin-Fit' tag on search results for universities with pre-approved loan structures.",
-      "Implement the Dollar-Dream Meter to gamify document uploads and reduce counseling lag.",
-      "Pilot Future-Mate Pods for the Fall 2026 intake for top UK/US cities.",
-      "Automate WhatsApp 'Milestone Alerts' triggered by the GlassBox backend.",
-      "Roll out 'Free Scapia Card' / 'Flight Voucher' rewards for users who complete their visa documentation within 7 days."
+      "Launch with hackathon partnerships (submit projects on Evidence)",
+      "Campus ambassadors program for Gen Z builders",
+      "Indie hacker / Figma / GitHub community partnerships",
+      "Shareable project links to LinkedIn/Twitter",
+      "Featured projects for early adopters",
+      "Themed build weeks (AI week, Design week)"
     ],
     "longTermBets": [
-      "Develop an 'Institutional Dashboard' for universities to directly update application statuses in Leap GPS.",
-      "Launch a peer-to-peer lending marketplace within LeapFinance for niche courses.",
-      "Build a 'Leap Verified' badge for housing providers to integrate into Future-Mate Pods."
+      "V2: WIP timelines (show process, not just finished work)",
+      "V2: Public project discussions (expand beyond private chats)",
+      "V2: Builder reputation score (algorithmic credibility metric)",
+      "V3: Verified recruiter accounts",
+      "V3: Advanced search (filters, sorting, saved searches)",
+      "V3: Project collections (curate your best work)",
+      "Monetization: Recruiter/founder search subscription (builders never pay)",
+      "Monetization: Featured project placements for hackathons"
     ]
   }
 }

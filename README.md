@@ -1,15 +1,15 @@
-# Leap Finance - Case Study
+# Evidence - Case Study
 
 ## Overview
-Leap Finance – Beyond the Loan is a product case study showcasing "Leap Orbit"—a post-arrival financial wellness suite designed to transform Leap Finance from a transactional loan provider into a daily financial co-pilot for international students. This project demonstrates how Smart Pacing, Credit Score Gamification, and Squad Splitting features can solve post-arrival financial anxiety and increase daily engagement.
+Evidence – Beyond the Loan is a product case study showcasing "Evidence Orbit"—a post-arrival financial wellness suite designed to transform Evidence from a transactional loan provider into a daily financial co-pilot for international students. This project demonstrates how Smart Pacing, Credit Score Gamification, and Squad Splitting features can solve post-arrival financial anxiety and increase daily engagement.
 
 ## The Problem
-While Leap Finance dominates the pre-departure lending market, there's a critical drop in engagement post-disbursal. Students land abroad with large sums of money but zero financial literacy in the new geography, leading to:
+While Evidence dominates the pre-departure lending market, there's a critical drop in engagement post-disbursal. Students land abroad with large sums of money but zero financial literacy in the new geography, leading to:
 - **Wealth Shock:** Managing $50k+ loans with no budgeting experience
 - **Credit Score Challenges:** Traditional banks ignore immigrants with no credit history
 - **Daily Financial Anxiety:** Students struggle to budget their loan disbursement effectively
 
-## The Solution: Leap Orbit
+## The Solution: Evidence Orbit
 A comprehensive post-arrival financial wellness suite featuring:
 - **Smart Pacing:** Intelligent budgeting tools to ensure loan amounts last the entire semester
 - **Credit Score Gamification:** Build a 750+ US Credit Score quickly through engaging, educational features
@@ -35,8 +35,8 @@ A comprehensive post-arrival financial wellness suite featuring:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/AnishGuruvelli/leap_finance.git
-   cd leap_finance
+   git clone https://github.com/AnishGuruvelli/evidence.git
+   cd evidence
    ```
 
 2. **Install dependencies:**
@@ -58,7 +58,7 @@ A comprehensive post-arrival financial wellness suite featuring:
 
 ## Project Structure
 ```
-leap_finance/
+evidence/
 ├── public/                # Static assets (images, favicon, etc.)
 ├── src/
 │   ├── components/        # UI components (accordion, button, charts, etc.)
@@ -104,7 +104,7 @@ The project can be deployed to any static hosting provider:
 
 3. **GitHub Pages:** Use `npm run deploy` to deploy automatically.
 
-Live demo: [https://anishguruvelli.github.io/leap_finance](https://anishguruvelli.github.io/leap_finance)
+Live demo: [https://anishguruvelli.github.io/evidence](https://anishguruvelli.github.io/evidence)
 
 ## Key Features Demonstrated
 
