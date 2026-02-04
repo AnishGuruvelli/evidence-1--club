@@ -11,13 +11,13 @@
     "aboutMe": "About"
   },
   "hero": {
-    "headline": "Evidence",
-    "subheadline": "LinkedIn shows where you worked. Evidence shows how you work.",
+    "headline": "EVIDENCE",
+    "subheadline": "Next Gen Professional Networking Platform | LinkedIn shows where you worked. Evidence shows how you work.",
     "tagline": "A network where work is the primitive for identity, conversation, discovery, and opportunity."
   },
   "pmSection": {
     "title": "The Complete Loop",
-    "body": "Evidence is not \"portfolio social media\". It is a network where work is the primitive for identity, conversation, discovery, and opportunity. Post work → People discover → People talk → People collaborate → Opportunities happen → Reputation compounds. Together: Post work → Get discovered → Start project talk → Build reputation → Get opportunities. That's Evidence.",
+    "body": "Evidence is a professional network where work—not profiles—drives discovery, conversation, collaboration, and opportunity. \n\nPost work → Get discovered → Start project conversations. Collaborate → Unlock opportunities → Build reputation.",
     "cta": "Explore the Product →"
   },
   "about": {
@@ -448,16 +448,22 @@
         "title": "Project-Tied Conversations",
         "description": "Core differentiator: \"Discuss this project\" with context pinned. This is what makes Evidence different."
       }
-    ],
-    "quickWins": [
+      ],
+    "phase0to3": [
+      "Proof-of-Work Identity",
+      "Peer Acknowledgements + Discuss This Project",
+      "Work-Led Discovery + Video-Only Projects",
       "Launch with hackathon partnerships (submit projects on Evidence)",
       "Campus ambassadors program for Gen Z builders",
-      "Indie hacker / Figma / GitHub community partnerships",
+      "Indie hacker / Figma / GitHub community partnerships"
+    ],
+    "phase3to6": [
+      "Social-First Auth",
       "Shareable project links to LinkedIn/Twitter",
       "Featured projects for early adopters",
       "Themed build weeks (AI week, Design week)"
     ],
-    "longTermBets": [
+    "phase6to12": [
       "V2: WIP timelines (show process, not just finished work)",
       "V2: Public project discussions (expand beyond private chats)",
       "V2: Builder reputation score (algorithmic credibility metric)",

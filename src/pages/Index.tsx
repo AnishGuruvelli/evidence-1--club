@@ -12,7 +12,6 @@ import {
   BarController,
 } from 'chart.js';
 import { Chart } from 'react-chartjs-2';
-import profileImg from '../../public/anishguruvelli.jpg';
 import content from '../content.json';
 
 ChartJS.register(
@@ -149,7 +148,7 @@ const Index = () => {
         borderColor: '#6366F1',
         borderWidth: 1,
         callbacks: {
-          label: function(context: any) {
+          label: function (context: any) {
             const total = context.dataset.data.reduce((a: number, b: number) => a + b, 0);
             const value = context.raw;
             const percent = ((value / total) * 100).toFixed(0);
@@ -209,7 +208,7 @@ const Index = () => {
         borderColor: '#6366F1',
         borderWidth: 1,
         callbacks: {
-          label: function(context: any) {
+          label: function (context: any) {
             return `RICE Score: ${context.raw}`;
           }
         }
@@ -228,9 +227,9 @@ const Index = () => {
         }
       },
       x: {
-        ticks: { 
-          color: '#94A3B8', 
-          font: { size: 11 } 
+        ticks: {
+          color: '#94A3B8',
+          font: { size: 11 }
         },
         grid: {
           display: false
@@ -299,6 +298,12 @@ const Index = () => {
     }
   };
 
+  const [heroLine1, heroLine2] = content.hero.subheadline
+    .split('|')
+    .map((part: string) => part.trim());
+
+  const loopParagraphs = (content.pmSection.body as string).split('\n\n');
+
   return (
     <div className="bg-slate-950 text-slate-100 font-inter min-h-screen">
       <style dangerouslySetInnerHTML={{
@@ -358,7 +363,7 @@ const Index = () => {
             background-color: #1E293B; 
             border: 4px solid #6366F1; 
             border-radius: 9999px; 
-            z-index: 10;
+            z-index: 10; 
             box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
           }
           .timeline::before { 
@@ -436,24 +441,75 @@ const Index = () => {
               {content.hero.tagline}
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               {content.hero.headline}
             </span>
           </h1>
-          <p className="mt-6 max-w-3xl mx-auto text-xl md:text-2xl text-slate-300 leading-relaxed">
-            {content.hero.subheadline}
+          <p className="mt-4 max-w-4xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed">
+            {heroLine1}
+          </p>
+          <p className="mt-2 max-w-4xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed">
+            {heroLine2}
           </p>
         </section>
 
-        {/* PM Section */}
+        {/* Hero Secondary Section: Problem & Loop */}
         <section className="py-12 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl shadow-2xl glow-card border border-slate-700/50 mb-10">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">{content.pmSection.title}</h2>
-            <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
-              {content.pmSection.body}
-            </p>
-            <a href="https://anishg-1-club.lovable.app" target="_blank" rel="noopener noreferrer" className="inline-block mt-2 px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300">{content.pmSection.cta}</a>
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="grid gap-8 md:grid-cols-2 items-stretch">
+              {/* Problem Statements / PRD Card */}
+              <div className="bg-slate-900/70 border border-slate-700/70 rounded-2xl p-8 flex flex-col justify-between text-left">
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4">
+                    Context of the Problem
+                  </h2>
+                  <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-4">
+                    Professional networking hasn&apos;t evolved in years. LinkedIn feels formal and disconnected from how Gen Z actually builds
+                    careers—through projects, side hustles, and collaborations.
+                  </p>
+                  <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-4">
+                    Imagine designing a next-gen network for 18–25 year olds in design, content, startups, and engineering—and owning the 0→1
+                    product strategy.
+                  </p>
+                </div>
+                <div className="mt-6">
+                  <a
+                    href="https://believed-breadfruit-1b2.notion.site/Evidence-Product-Requirements-Document-PRD-2fdbc8afb250801c8d10f2e870ca6dc3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full shadow-lg hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300"
+                  >
+                    Explore the PRD →
+                  </a>
+                </div>
+              </div>
+
+              {/* The Complete Loop Card */}
+              <div className="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700/70 rounded-2xl p-8 flex flex-col items-start text-left">
+                <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4">
+                  {content.pmSection.title}
+                </h2>
+                {loopParagraphs.map((para, index) => (
+                  <p
+                    key={index}
+                    className={`text-sm md:text-base text-slate-300 leading-relaxed max-w-xl ${
+                      index === 0 ? 'mb-4' : index === loopParagraphs.length - 1 ? 'mb-8' : 'mb-4'
+                    }`}
+                  >
+                    {para}
+                  </p>
+                ))}
+                <a
+                  href="https://anishg-1-club.lovable.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full shadow-lg hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300"
+                >
+                  {content.pmSection.cta}
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -541,13 +597,19 @@ const Index = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {content.topPainPoints.map((point, index) => {
+                const isOdd = content.topPainPoints.length % 2 === 1;
+                const isLast = index === content.topPainPoints.length - 1;
                 const colorOrder = ['cyan', 'purple', 'pink', 'amber', 'emerald'];
                 const color = colorOrder[index % colorOrder.length];
                 const c = colorMap[color] || colorMap.cyan;
                 return (
                   <div
                     key={index}
-                    className={`bg-slate-800/50 shadow-xl rounded-2xl p-6 border-l-4 ${c.border} glow-card hover:border-opacity-100 transition-all`}
+                    className={`
+                      bg-slate-800/50 shadow-xl rounded-2xl p-6 border-l-4 ${c.border} glow-card
+                      hover:border-opacity-100 transition-all
+                      ${isOdd && isLast ? 'md:col-span-2 md:max-w-2xl md:mx-auto' : ''}
+                    `}
                   >
                     <h3 className={`text-lg font-bold ${c.text} mb-3 flex items-center`}>
                       <span className="text-2xl mr-3">{point.emoji}</span>
@@ -634,29 +696,48 @@ const Index = () => {
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="relative pl-12 timeline">
+              {/* Phase 1: 0–3 months */}
               <div className="mb-10 relative">
                 <div className="phase-card bg-gradient-to-br from-emerald-900/30 to-emerald-800/20 p-6 rounded-xl shadow-xl border-l-4 border-emerald-400 glow-card">
-                  <p className="text-sm font-semibold text-emerald-300 mb-2">🔹 Phase 1: Quick Wins (3–6 months)</p>
-                  <h4 className="font-bold text-lg mt-1 text-slate-100 mb-3">Core Foundation & Engagement Loops</h4>
+                  <p className="text-sm font-semibold text-emerald-300 mb-2">🔹 Phase 1: Foundation (0–3 months)</p>
+                  <h4 className="font-bold text-lg mt-1 text-slate-100 mb-3">Launch & Proof-of-Work Supply</h4>
                   <ul className="mt-2 text-slate-300 space-y-1 text-sm">
-                    {content.finalRecommendation.quickWins.map((win, index) => (
+                    {content.finalRecommendation.phase0to3.map((item, index) => (
                       <li key={index} className="flex items-start">
                         <span className="text-emerald-400 mr-2">•</span>
-                        <span>{win}</span>
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
+
+              {/* Phase 2: 3–6 months */}
+              <div className="mb-10 relative">
+                <div className="phase-card bg-gradient-to-br from-cyan-900/30 to-cyan-800/20 p-6 rounded-xl shadow-xl border-l-4 border-cyan-400 glow-card">
+                  <p className="text-sm font-semibold text-cyan-300 mb-2">🔹 Phase 2: Growth Loops (3–6 months)</p>
+                  <h4 className="font-bold text-lg mt-1 text-slate-100 mb-3">Engagement & Distribution Flywheels</h4>
+                  <ul className="mt-2 text-slate-300 space-y-1 text-sm">
+                    {content.finalRecommendation.phase3to6.map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-cyan-400 mr-2">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Phase 3: 6–12 months */}
               <div className="relative">
                 <div className="phase-card bg-gradient-to-br from-amber-900/30 to-amber-800/20 p-6 rounded-xl shadow-xl border-l-4 border-amber-400 glow-card">
-                  <p className="text-sm font-semibold text-amber-300 mb-2">🔹 Phase 2: Long-term (6–18 months)</p>
+                  <p className="text-sm font-semibold text-amber-300 mb-2">🔹 Phase 3: Scale (6–12 months)</p>
                   <h4 className="font-bold text-lg mt-1 text-slate-100 mb-3">AI-Driven Personalization & Placement Acceleration</h4>
                   <ul className="mt-2 text-slate-300 space-y-1 text-sm">
-                    {content.finalRecommendation.longTermBets.map((bet, index) => (
+                    {content.finalRecommendation.phase6to12.map((item, index) => (
                       <li key={index} className="flex items-start">
                         <span className="text-amber-400 mr-2">•</span>
-                        <span>{bet}</span>
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -673,7 +754,7 @@ const Index = () => {
               <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">3️⃣ METRICS & SUCCESS</h2>
               <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl">Measuring Our Success</p>
             </div>
-            
+
             {/* North Star Metric */}
             <div className="mb-12 bg-gradient-to-br from-cyan-900/30 to-purple-900/30 p-8 rounded-2xl border border-cyan-500/30 glow-card">
               <h3 className="text-2xl font-bold text-cyan-300 mb-4">{content.successMetrics.northStar.title}</h3>
@@ -710,8 +791,8 @@ const Index = () => {
                     <span className="text-amber-400 mr-2">✓</span>
                     <span>{check}</span>
                   </li>
-                ))}
-              </ul>
+                    ))}
+                  </ul>
             </div>
           </div>
         </section>
@@ -806,8 +887,8 @@ const Index = () => {
                     <h4 className="text-lg font-semibold text-emerald-300 mb-2">{strategy.strategy}</h4>
                     <p className="text-slate-300 text-sm mb-3 leading-relaxed">{strategy.description}</p>
                     <p className="text-xs text-emerald-400 font-medium">UX Impact: {strategy.uxImpact}</p>
-                  </div>
-                ))}
+                </div>
+              ))}
               </div>
               <div className="border-t border-slate-700 pt-6 mt-6">
                 <p className="text-slate-300 text-sm">
@@ -824,7 +905,7 @@ const Index = () => {
             <div className="flex-shrink-0 flex justify-center w-full md:w-auto mb-10 md:mb-0">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur-xl opacity-50"></div>
-                <img src={profileImg} alt="Anish Guruvelli Professional" className="relative w-56 h-56 rounded-full object-cover shadow-2xl border-4 border-slate-700" />
+                <img src="/anishguruvelli.jpg" alt="Anish Guruvelli Professional" className="relative w-56 h-56 rounded-full object-cover shadow-2xl border-4 border-slate-700" />
               </div>
             </div>
             <div className="flex-1 w-full">
