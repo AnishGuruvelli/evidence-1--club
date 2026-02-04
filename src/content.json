@@ -17,13 +17,13 @@
   },
   "pmSection": {
     "title": "The Complete Loop",
-    "body": "Evidence is a professional network where work—not profiles—drives discovery, conversation, collaboration, and opportunity. \n\nPost work → Get discovered → Start project conversations. Collaborate → Unlock opportunities → Build reputation.",
+    "body": "Evidence is a professional network where work—not profiles—drives discovery, conversation, collaboration, and opportunity. \n\nPost work → Get discovered → Start project conversations → Collaborate → Unlock opportunities → Build reputation.",
     "cta": "Explore the MVP Draft →"
   },
   "about": {
     "sectionTitle": "1️⃣ Problem Framing",
     "title": "What's Broken Today?",
-    "aboutTitle": "Why Existing Solutions Fail",
+    "aboutTitle": "Why Existing Solutions Fail?",
     "aboutBody": "Across platforms like LinkedIn, portfolios, and repos, builders face fundamental problems: work is scattered, conversations lack context, discovery is pedigree-based, and there's no clear pathway from work to opportunity. Evidence solves this by making work the center of everything.",
     "goal": "The goal? Create a network where proof-of-work drives discovery, conversation, and opportunity—not titles, companies, or connections.",
     "industryTitle": "The Discovery Gap",
@@ -37,22 +37,22 @@
     "mission": "Mission: Build a network where work is the primitive. If someone clicks \"Discuss this project\", that gives context, removes awkward cold starts, and makes networking about craft—not small talk."
   },
   "userSegments": [
-    "Gen Z builders (18–25) — students, recent grads, early-career designers, devs, content creators, indie hackers",
-    "Founders looking for craft-first talent",
-    "Startup recruiters seeking proof-of-work",
-    "Mentors discovering emerging builders"
+    "Gen Z builders (18–25): students, recent grads, early-career designers, devs, creators, indie hackers with projects but low visibility",
+    "Founders: hiring for craft-first talent, want signal beyond resumes",
+    "Startup recruiters: need fast proof-of-work to evaluate candidates",
+    "Mentors: scouting emerging builders to guide and back"
   ],
   "userGoals": [
     "Show real work visually in one discoverable place",
     "Start context-rich conversations about specific projects",
-    "Get discovered by what they build, not where they worked",
-    "Create a pathway from work → opportunity"
+    "Get discovered for what they built, not where they worked",
+    "Convert work → visibility → opportunities"
   ],
   "businessFocus": [
-    "Social-first Google + GitHub login (great for devs/builders, no password friction)",
-    "Only videos, minimum 30 seconds",
-    "Work-led discovery and conversation",
-    "Proof-of-work reputation system"
+    "Make posting work frictionless (social-first, Google/GitHub login)",
+    "Enforce video-first proof (≥30s) to raise signal quality",
+    "Drive work-led discovery and project-centric conversations",
+    "Build a proof-of-work reputation layer that compounds over time"
   ],
   "clientPreferences": {
     "labels": [
@@ -104,6 +104,13 @@
       "problem": "Likes, followers, endorsements don't show credibility. No metric that says: \"This person consistently builds thoughtful things\". Reputation should be proof-of-work based.",
       "friction": "I have 10K followers but no way to show I actually build quality things. Likes don't equal credibility.",
       "color": "purple"
+    },
+    {
+      "emoji": "🚧",
+      "title": "I Want to See Unfinished Stuff",
+      "problem": "Unfinished work shows thinking, struggle, process, and authenticity—but platforms rarely do this. Builders can't share work-in-progress, ask for help, or help others during the building process.",
+      "friction": "I want to show my process and get feedback while building, but platforms only reward polished, finished work. There's no safe space to share WIP timelines and collaborate during the journey.",
+      "color": "emerald"
     }
   ],
   "proposedSolutions": [
@@ -163,7 +170,7 @@
     },
     {
       "title": "🔐 Social-First Auth",
-      "description": "P0: Frictionless Onboarding. Google + GitHub login. Great for devs/builders, no password friction."
+      "description": "P1: Frictionless Onboarding. Google + GitHub login. Great for devs/builders, no password friction."
     },
     {
       "title": "📹 Video-Only Projects",
