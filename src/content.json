@@ -461,12 +461,12 @@
       "Social-First Auth",
       "Shareable project links to LinkedIn/Twitter",
       "Featured projects for early adopters",
-      "Themed build weeks (AI week, Design week)"
-    ],
-    "phase6to12": [
+      "Themed build weeks (AI week, Design week)",
       "V2: WIP timelines (show process, not just finished work)",
       "V2: Public project discussions (expand beyond private chats)",
-      "V2: Builder reputation score (algorithmic credibility metric)",
+      "V2: Builder reputation score (algorithmic credibility metric)"
+    ],
+    "phase6to12": [
       "V3: Verified recruiter accounts",
       "V3: Advanced search (filters, sorting, saved searches)",
       "V3: Project collections (curate your best work)",

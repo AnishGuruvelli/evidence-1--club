@@ -408,7 +408,7 @@ const Index = () => {
               </div>
             </div>
             <div className="md:hidden">
-              <button 
+              <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-slate-200 hover:bg-slate-800 focus:outline-none"
               >
@@ -446,11 +446,19 @@ const Index = () => {
               {content.hero.headline}
             </span>
           </h1>
-          <p className="mt-4 max-w-4xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed">
+          <p className="mt-4 max-w-4xl mx-auto text-base md:text-lg text-slate-500 leading-relaxed">
             {heroLine1}
           </p>
-          <p className="mt-2 max-w-4xl mx-auto text-lg md:text-xl text-slate-300 leading-relaxed">
-            {heroLine2}
+          <p className="mt-3 max-w-4xl mx-auto text-xl md:text-2xl font-semibold leading-relaxed">
+            <span className="text-slate-300">
+              {heroLine2.split('Evidence')[0]}
+            </span>
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Evidence
+            </span>
+            <span className="text-slate-300">
+              {heroLine2.split('Evidence')[1]}
+            </span>
           </p>
         </section>
 
@@ -493,9 +501,8 @@ const Index = () => {
                 {loopParagraphs.map((para, index) => (
                   <p
                     key={index}
-                    className={`text-sm md:text-base text-slate-300 leading-relaxed max-w-xl ${
-                      index === 0 ? 'mb-4' : index === loopParagraphs.length - 1 ? 'mb-8' : 'mb-4'
-                    }`}
+                    className={`text-sm md:text-base text-slate-300 leading-relaxed max-w-xl ${index === 0 ? 'mb-4' : index === loopParagraphs.length - 1 ? 'mb-8' : 'mb-4'
+                      }`}
                   >
                     {para}
                   </p>
@@ -791,8 +798,8 @@ const Index = () => {
                     <span className="text-amber-400 mr-2">✓</span>
                     <span>{check}</span>
                   </li>
-                    ))}
-                  </ul>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
@@ -887,13 +894,8 @@ const Index = () => {
                     <h4 className="text-lg font-semibold text-emerald-300 mb-2">{strategy.strategy}</h4>
                     <p className="text-slate-300 text-sm mb-3 leading-relaxed">{strategy.description}</p>
                     <p className="text-xs text-emerald-400 font-medium">UX Impact: {strategy.uxImpact}</p>
-                </div>
-              ))}
-              </div>
-              <div className="border-t border-slate-700 pt-6 mt-6">
-                <p className="text-slate-300 text-sm">
-                  <span className="font-semibold text-emerald-300">Revenue Projection:</span> {content.monetizationPathway.revenueProjection}
-                </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
