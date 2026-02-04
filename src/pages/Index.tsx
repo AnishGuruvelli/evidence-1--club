@@ -494,27 +494,32 @@ const Index = () => {
               </div>
 
               {/* The Complete Loop Card */}
-              <div className="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700/70 rounded-2xl p-8 flex flex-col items-start text-left">
-                <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4">
-                  {content.pmSection.title}
-                </h2>
-                {loopParagraphs.map((para, index) => (
-                  <p
-                    key={index}
-                    className={`text-sm md:text-base text-slate-300 leading-relaxed max-w-xl ${index === 0 ? 'mb-4' : index === loopParagraphs.length - 1 ? 'mb-8' : 'mb-4'
+              <div className="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700/70 rounded-2xl p-8 flex flex-col justify-between text-left">
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4">
+                    {content.pmSection.title}
+                  </h2>
+                  {loopParagraphs.map((para, index) => (
+                    <p
+                      key={index}
+                      className={`text-sm md:text-base text-slate-300 leading-relaxed max-w-xl ${
+                        index === 0 ? 'mb-4' : index === loopParagraphs.length - 1 ? 'mb-0' : 'mb-4'
                       }`}
+                    >
+                      {para}
+                    </p>
+                  ))}
+                </div>
+                <div className="mt-6">
+                  <a
+                    href="https://anishg-1-club.lovable.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full shadow-lg hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300"
                   >
-                    {para}
-                  </p>
-                ))}
-                <a
-                  href="https://anishg-1-club.lovable.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full shadow-lg hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300"
-                >
-                  {content.pmSection.cta}
-                </a>
+                    {content.pmSection.cta}
+                  </a>
+                </div>
               </div>
             </div>
           </div>
