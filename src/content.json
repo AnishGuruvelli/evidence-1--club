@@ -108,8 +108,8 @@
     {
       "emoji": "🚧",
       "title": "I Want to See Unfinished Stuff",
-      "problem": "Unfinished work shows thinking, struggle, process, and authenticity—but platforms rarely do this. Builders can't share work-in-progress, ask for help, or help others during the building process.",
-      "friction": "I want to show my process and get feedback while building, but platforms only reward polished, finished work. There's no safe space to share WIP timelines and collaborate during the journey.",
+      "problem": "Unfinished work shows thinking, struggle, process, and authenticity—but platforms rarely allow this safely. Builders can't share work-in-progress, ask for help with doubts, or help others while they're still building.",
+      "friction": "I want to show my process and get feedback or have my doubts solved while building, but platforms only reward polished, finished work. There's no safe space to share WIP timelines, ask for help, and collaborate during the journey.",
       "color": "emerald"
     }
   ],
@@ -136,9 +136,9 @@
       "emoji": "💬",
       "title": "Work-Led Interaction",
       "solution": "Discuss This Project CTA",
-      "whatItDoes": "Every project has a \"Discuss this project\" button. Clicking it starts a private chat with the project context pinned at the top. No cold starts. No awkward introductions. Just: \"I want to talk about THIS build\".",
-      "whyItHelps": "Gives context to conversations instantly. Removes awkward cold starts. Makes networking about craft, not small talk. That's radically different from a DM.",
-      "example": "Founder clicks \"Discuss this project\" on Riya's Figma prototype. Chat opens with project context pinned. Conversation starts: \"I love your fintech UX. Are you open to freelance?\"",
+      "whatItDoes": "Every project has a \"Discuss this project\" button. Clicking it starts a private chat with the project context pinned at the top. Builders can ask for help on specific WIP pieces, get doubts clarified, or offer help to others—all anchored to real work.",
+      "whyItHelps": "Gives context to conversations instantly. Removes awkward cold starts. Makes networking about craft, not small talk, and creates a safe space for meaningful, help-oriented discussions.",
+      "example": "A builder shares a half-finished dashboard and clicks \"Discuss this project\" to ask for feedback on the information hierarchy. A designer replies with concrete suggestions, and the conversation stays tied to that exact version of the work.",
       "color": "yellow"
     },
     {
@@ -165,7 +165,7 @@
       "description": "P0: Work-Led Interaction. Project-tied private chat with context pinned. This is the core differentiator—context-rich conversations."
     },
     {
-      "title": "🔍 Work-Led Discovery",
+      "title": "🔍 Discovery → Opportunity",
       "description": "P0: Discovery Engine. Explore = projects only. Search & tag filters. \"Open to collaborate\" toggle."
     },
     {

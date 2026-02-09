@@ -173,7 +173,9 @@ const Index = () => {
     datasets: [
       {
         label: 'RICE Score',
-        data: [92, 88, 85, 82, 75],
+        // Order: Proof-of-Work Identity, Peer Acknowledgements, Discuss This Project, Work-Led Discovery, Social-First Auth
+        // Peer Acknowledgements intentionally scored lower than Discuss This Project & Work-Led Discovery
+        data: [92, 80, 88, 86, 72],
         backgroundColor: [
           'rgba(99, 102, 241, 0.8)',
           'rgba(139, 92, 246, 0.8)',
@@ -641,7 +643,7 @@ const Index = () => {
         {/* Solution */}
         <section id="solution" ref={el => (routeRefs.current['solution'] = el)} className="py-16 scroll-mt-20">
           <div className="text-center mb-12">
-            <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">5️⃣ Proposed Solutions</h2>
+            <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">🧩 Proposed Solutions</h2>
             <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl">How {content.hero.headline} Solves These Pain Points</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -763,7 +765,7 @@ const Index = () => {
         <section id="success-metrics" ref={el => (routeRefs.current['success-metrics'] = el)} className="py-16 bg-slate-900/50 rounded-3xl shadow-xl glow-card border border-slate-800/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">3️⃣ METRICS & SUCCESS</h2>
+              <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">📊 METRICS & SUCCESS</h2>
               <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl">Measuring Our Success</p>
             </div>
 
@@ -813,7 +815,7 @@ const Index = () => {
         <section id="next-steps" ref={el => (routeRefs.current['next-steps'] = el)} className="py-16 scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">4️⃣ GO-TO-MARKET</h2>
+              <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">🚀 GO-TO-MARKET</h2>
               <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl mb-10">Reaching First 10,000 Users</p>
             </div>
 
@@ -859,7 +861,7 @@ const Index = () => {
         <section id="evolution" ref={el => (routeRefs.current['evolution'] = el)} className="py-16 bg-slate-900/50 rounded-3xl shadow-xl glow-card border border-slate-800/50 scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">5️⃣ PRODUCT EVOLUTION & MONETIZATION</h2>
+              <h2 className="text-sm font-semibold text-cyan-400 tracking-wide uppercase mb-2">📈 PRODUCT EVOLUTION & MONETIZATION</h2>
               <p className="mt-2 text-4xl font-extrabold text-slate-100 tracking-tight sm:text-5xl">6–12 Month Roadmap</p>
             </div>
 
@@ -907,7 +909,7 @@ const Index = () => {
         </section>
 
         {/* About Me */}
-        <section id="about-me" ref={el => (routeRefs.current['about-me'] = el)} className="py-24 bg-slate-900/50 rounded-3xl shadow-xl glow-card border border-slate-800/50">
+        <section id="about-me" ref={el => (routeRefs.current['about-me'] = el)}  className="py-16 scroll-mt-20">
           <div className="max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center gap-16 md:gap-24">
             <div className="flex-shrink-0 flex justify-center w-full md:w-auto mb-10 md:mb-0">
               <div className="relative">
